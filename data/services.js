@@ -1,0 +1,178 @@
+export const SERVICE_CATEGORIES = [
+  {
+    id: "sites-web",
+    label: "Sites web",
+    services: [
+      {
+        id: "site-vitrine",
+        name: "Site vitrine",
+        probleme: "Une présence en ligne datée qui ne convertit pas vos visiteurs en prospects.",
+        solution: "Design sur-mesure, SEO optimisé et performance technique de pointe.",
+        benefices: ["Crédibilité immédiate", "Augmentation des ventes", "Image professionnelle renforcée"],
+      },
+      {
+        id: "site-ecommerce",
+        name: "Site e-commerce",
+        probleme: "Un tunnel d'achat complexe qui provoque un taux d'abandon panier élevé.",
+        solution: "Architecture headless, checkout simplifié et expérience utilisateur fluide.",
+        benefices: ["Fidélisation accrue", "Panier moyen en hausse", "Paiement sécurisé"],
+      },
+      {
+        id: "landing-page",
+        name: "Landing page",
+        probleme: "Faible ROI sur vos campagnes publicitaires à cause d'un design générique.",
+        solution: "Copywriting persuasif et design orienté conversion psychologique.",
+        benefices: ["Coût d'acquisition réduit", "Tracking précis", "A/B testing intégré"],
+      },
+      {
+        id: "site-institutionnel",
+        name: "Site institutionnel",
+        probleme: "Difficulté à présenter clairement votre mission et votre légitimité.",
+        solution: "Architecture de contenu claire mettant en avant expertise et transparence.",
+        benefices: ["Confiance renforcée", "Meilleur référencement", "Communication institutionnelle claire"],
+      },
+      {
+        id: "blog-professionnel",
+        name: "Blog professionnel",
+        probleme: "Aucune visibilité organique et une expertise qui reste invisible en ligne.",
+        solution: "Stratégie de contenu SEO et CMS simple à administrer pour vos équipes.",
+        benefices: ["Trafic organique durable", "Positionnement d'expert", "Génération de leads qualifiés"],
+      },
+      {
+        id: "site-reservation",
+        name: "Site de réservation",
+        probleme: "Une gestion manuelle des rendez-vous chronophage et source d'erreurs.",
+        solution: "Système de réservation en ligne automatisé avec confirmations instantanées.",
+        benefices: ["Gain de temps opérationnel", "Réduction des rendez-vous manqués", "Disponible 24/7"],
+      },
+    ],
+  },
+  {
+    id: "applications-web",
+    label: "Applications web",
+    services: [
+      {
+        id: "crm",
+        name: "CRM",
+        probleme: "Des informations clients dispersées entre emails, tableurs et mémoire de l'équipe.",
+        solution: "Plateforme centralisée de gestion de la relation client, adaptée à vos process.",
+        benefices: ["Meilleur suivi commercial", "Décisions basées sur la donnée", "Collaboration facilitée"],
+      },
+      {
+        id: "portail-client",
+        name: "Portail client",
+        probleme: "Vos clients doivent vous solliciter pour chaque information ou document.",
+        solution: "Espace personnel sécurisé où le client accède en autonomie à ses données.",
+        benefices: ["Réduction du support", "Satisfaction client accrue", "Image moderne et professionnelle"],
+      },
+      {
+        id: "tableau-bord",
+        name: "Tableau de bord décisionnel",
+        probleme: "Vous prenez des décisions stratégiques sans visibilité claire sur vos données.",
+        solution: "Dashboards visuels connectés à vos sources de données en temps réel.",
+        benefices: ["Décisions plus rapides", "Indicateurs clés centralisés", "Anticipation des tendances"],
+      },
+    ],
+  },
+  {
+    id: "developpement-metier",
+    label: "Développement métier",
+    services: [
+      {
+        id: "gestion-commerciale",
+        name: "Gestion commerciale",
+        probleme: "Suivi des ventes, devis et factures éclaté sur plusieurs outils non connectés.",
+        solution: "Solution unifiée de gestion commerciale, du devis à la facturation.",
+        benefices: ["Process commercial fluide", "Moins d'erreurs de facturation", "Vision globale du pipeline"],
+      },
+      {
+        id: "gestion-rh",
+        name: "Gestion RH",
+        probleme: "Une gestion RH encore largement manuelle, source de perte de temps.",
+        solution: "Plateforme centralisant congés, contrats, évaluations et documents RH.",
+        benefices: ["Gain de temps administratif", "Conformité facilitée", "Meilleure expérience collaborateur"],
+      },
+      {
+        id: "helpdesk",
+        name: "Helpdesk / Ticketing",
+        probleme: "Des demandes clients qui se perdent entre emails et messages épars.",
+        solution: "Système de tickets structuré avec suivi et priorisation automatique.",
+        benefices: ["Temps de réponse réduit", "Satisfaction client mesurable", "Historique centralisé"],
+      },
+    ],
+  },
+  {
+    id: "automatisation",
+    label: "Automatisation",
+    services: [
+      {
+        id: "automatisation-processus",
+        name: "Automatisation des processus",
+        probleme: "Des tâches répétitives à faible valeur ajoutée qui mobilisent vos équipes.",
+        solution: "Orchestration de workflows automatisés (Make, n8n, Zapier, scripts sur-mesure).",
+        benefices: ["Zéro erreur humaine", "Gain de temps significatif", "Équipes recentrées sur l'essentiel"],
+      },
+      {
+        id: "integration-api",
+        name: "Intégration API",
+        probleme: "Vos outils actuels fonctionnent en silos, sans échange de données entre eux.",
+        solution: "Connexion et synchronisation de vos systèmes via API sur-mesure.",
+        benefices: ["Données toujours à jour", "Moins de ressaisie manuelle", "Écosystème logiciel cohérent"],
+      },
+    ],
+  },
+  {
+    id: "intelligence-artificielle",
+    label: "Intelligence artificielle",
+    services: [
+      {
+        id: "chatbot-ia",
+        name: "Chatbot IA",
+        probleme: "Un support client saturé et des temps de réponse trop longs.",
+        solution: "Agent conversationnel basé sur l'IA, entraîné sur vos données et process.",
+        benefices: ["Disponibilité 24/7", "Réduction des coûts de support", "Qualification automatique des leads"],
+      },
+      {
+        id: "analyse-documentaire",
+        name: "Analyse documentaire",
+        probleme: "Un volume important de documents à traiter manuellement, lent et coûteux.",
+        solution: "Extraction et classification automatique d'information via IA.",
+        benefices: ["Traitement accéléré", "Réduction des erreurs", "Recherche instantanée dans vos documents"],
+      },
+      {
+        id: "generation-contenu",
+        name: "Génération automatique de contenus",
+        probleme: "Produire du contenu de qualité en continu demande un temps considérable.",
+        solution: "Outils IA de génération de contenu, encadrés par une validation humaine.",
+        benefices: ["Production de contenu accélérée", "Cohérence éditoriale", "Coûts de création réduits"],
+      },
+    ],
+  },
+  {
+    id: "developpement-avance",
+    label: "Développement avancé",
+    services: [
+      {
+        id: "api-rest",
+        name: "API REST / GraphQL",
+        probleme: "Besoin d'exposer ou de connecter vos données à d'autres applications de façon fiable.",
+        solution: "Conception et développement d'API sécurisées, documentées et évolutives.",
+        benefices: ["Interopérabilité", "Évolutivité technique", "Sécurité renforcée"],
+      },
+      {
+        id: "paiement-en-ligne",
+        name: "Paiement en ligne",
+        probleme: "Vous ne pouvez pas encaisser vos clients directement depuis votre plateforme.",
+        solution: "Intégration de solutions de paiement sécurisées et conformes.",
+        benefices: ["Encaissement simplifié", "Conformité sécurité", "Expérience d'achat fluide"],
+      },
+      {
+        id: "authentification",
+        name: "Authentification & gestion des utilisateurs",
+        probleme: "Besoin de sécuriser l'accès à des espaces réservés (clients, équipe, partenaires).",
+        solution: "Système d'authentification robuste avec gestion fine des rôles et permissions.",
+        benefices: ["Sécurité des données", "Contrôle d'accès précis", "Expérience utilisateur fluide"],
+      },
+    ],
+  },
+];
