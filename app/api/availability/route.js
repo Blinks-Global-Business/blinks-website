@@ -3,7 +3,7 @@ import { getAvailableSlots } from "@/lib/googleCalendar";
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
-  const date = searchParams.get("date"); 
+  const date = searchParams.get("date");
 
   if (!date) {
     return NextResponse.json({ error: "Date manquante" }, { status: 400 });
@@ -14,6 +14,10 @@ export async function GET(request) {
     return NextResponse.json({ slots });
   } catch (error) {
     console.error("Erreur disponibilités:", error);
-    return NextResponse.json({ error: "Erreur de récupération" }, { status: 500 });
+    // ⚠️ TEMPORAIRE — expose le détail de l'erreur pour debug, à retirer une fois corrigé
+    return NextResponse.json(
+      { error: "Erreur de récupération", detail: error.message, stack: error.stack },
+      { status: 500 }
+    );
   }
 }

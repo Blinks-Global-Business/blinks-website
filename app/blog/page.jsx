@@ -1,5 +1,6 @@
 import BlogGrid from "@/components/sections/BlogGrid";
 import { BLOG_POSTS } from "@/data/blogPosts";
+import NewsletterForm from "@/components/sections/NewsletterForm";
 
 export const metadata = {
   title: "Blog - Blinks Global Business",
@@ -28,34 +29,7 @@ export default function BlogPage() {
       </section>
 
       {/* NEWSLETTER */}
-<section className="bg-primary/5 border-t border-border">
-  <div className="max-w-7xl mx-auto px-6 py-16">
-    <div className="bg-white rounded-2xl border border-border shadow-md p-10 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-      <div>
-        <h2 className="font-heading font-bold text-xl md:text-2xl text-text mb-2">
-          Restez informé de nos dernières actualités
-        </h2>
-        <p className="font-body text-sm text-text-muted">
-          Rejoignez nos lecteurs qui reçoivent nos analyses mensuelles directement dans leur boîte mail.
-        </p>
-      </div>
-      <form className="flex flex-col sm:flex-row w-full md:w-auto gap-3">
-  <input
-    type="email"
-    placeholder="Votre adresse e-mail"
-    required
-    className="w-full sm:flex-1 md:w-64 border border-border rounded-md focus:border-primary outline-none font-body text-sm px-4 py-2.5 bg-bg"
-  />
-  <button
-    type="submit"
-    className="w-full sm:w-auto shrink-0 bg-accent text-primary-dark font-body font-medium text-sm px-6 py-2.5 rounded-md hover:opacity-90 transition-opacity"
-  >
-    S'abonner
-  </button>
-</form>
-    </div>
-  </div>
-</section>
+      <NewsletterForm />
     </>
   );
 }
