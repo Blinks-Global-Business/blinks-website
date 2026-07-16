@@ -1,17 +1,15 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
-import { createCalendarEvent } from "@/lib/googleCalendar";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const { name, email, phone, date, slot } = await request.json();
 
     await createCalendarEvent({ name, email, phone, date, slot });
 
     await resend.emails.send({
-      from: "Site Blinks Global Business <onboarding@resend.dev>",
+      from: "Site Blinks Global Business <contact@blinksglobalbusiness.com>",
       to: process.env.CONTACT_EMAIL_TO,
       replyTo: email,
       subject: `[RDV confirmé] ${name} — ${slot}`,

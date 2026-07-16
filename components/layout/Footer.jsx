@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6";
 import { SITE, SOCIAL_LINKS, NAV_LINKS, LEGAL_LINKS } from "@/lib/constants";
 import { SERVICE_CATEGORIES } from "@/data/services";
 import LanguageToggle from "@/components/ui/LanguageToggle";
@@ -28,6 +28,12 @@ export default function Footer() {
             <a href={SOCIAL_LINKS.whatsapp} aria-label="WhatsApp" className="hover:text-accent">
                 <MessageCircle size={18} />
             </a>
+            <a href={SOCIAL_LINKS.tiktok} aria-label="Tiktok" className="hover:text-accent">
+                <FaTiktok size={18} />
+            </a>
+            <a href={SOCIAL_LINKS.youtube} aria-label="YouTube" className="hover:text-accent">
+                <FaYoutube size={18} />
+            </a>
           </div>
         </div>
 
@@ -45,7 +51,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Colonne 3 — Services */}
+        {/* Colonne 3 — Légal */}
         <div>
           <h4 className="font-heading font-semibold text-sm mb-4">Légal</h4>
             <ul className="space-y-2.5">
@@ -64,7 +70,7 @@ export default function Footer() {
           <h4 className="font-heading font-semibold text-sm mb-4">Contact</h4>
           <ul className="space-y-2.5 font-body text-sm text-white/70">
             <li>{SITE.email}</li>
-            <li>{SITE.phone2}</li>
+            <li>{SITE.phone1}</li>
             <li>{SITE.address}</li>
             <li>{SITE.hours}</li>
           </ul>

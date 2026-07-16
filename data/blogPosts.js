@@ -13,7 +13,7 @@ export const BLOG_POSTS = [
     category: "transformation-digitale",
     title: "L'avenir du conseil stratégique à l'ère de l'IA générative",
     excerpt:
-      "Découvrez comment BLINKS redéfinit les standards de l'industrie en intégrant des solutions d'intelligence artificielle sur-mesure pour optimiser les processus opérationnels des entreprises.",
+      "Découvrez comment Blinks Global Business redéfinit les standards de l'industrie en intégrant des solutions d'intelligence artificielle sur-mesure pour optimiser les processus opérationnels des entreprises.",
     content: `Contenu complet de l'article à rédiger. Ce texte sert de placeholder en attendant la rédaction définitive.`,
     author: "Mike-Aurel ZOLA",
     date: "2026-07-20",

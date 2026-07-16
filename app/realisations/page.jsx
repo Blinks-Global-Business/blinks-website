@@ -1,14 +1,13 @@
-import Button from "@/components/ui/Button";
+import ModalButton from "@/components/ui/ModalButton";
 import CaseStudiesGrid from "@/components/sections/CaseStudiesGrid";
 import TrustedLogos from "@/components/sections/TrustedLogos";
-import { CASE_STUDIES } from "@/data/caseStudies";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
+import { CASE_STUDIES } from "@/data/caseStudies";
 import { TESTIMONIALS } from "@/data/testimonials";
 
 export const metadata = {
   title: "Nos réalisations - Blinks Global Business",
-  description:
-    "Découvrez comment Blinks Global Business accompagne ses partenaires vers des résultats concrets et mesurables.",
+  description: "Découvrez comment Blinks Global Business accompagne ses partenaires vers des résultats concrets et mesurables.",
 };
 
 const TRUSTED_BY = [
@@ -22,32 +21,26 @@ const TRUSTED_BY = [
 export default function RealisationsPage() {
   return (
     <>
-      {/* HEADER DE PAGE */}
       <section className="bg-primary/5 border-b border-border">
         <div className="max-w-3xl mx-auto px-6 py-16 text-center">
-          <h1 className="font-heading font-bold text-3xl md:text-4xl text-text mb-4">
-            Nos réalisations
-          </h1>
+          <h1 className="font-heading font-bold text-3xl md:text-4xl text-text mb-4">Nos réalisations</h1>
           <p className="font-body text-text-muted">
-            Découvrez comment nous accompagnons nos partenaires dans leur
-            succès numérique à travers des résultats concrets et mesurables.
+            Découvrez comment nous accompagnons nos partenaires dans leur succès numérique à travers des
+            résultats concrets et mesurables.
           </p>
         </div>
       </section>
 
-      {/* GRILLE FILTRABLE */}
       <section className="max-w-7xl mx-auto px-6 py-16">
         <CaseStudiesGrid studies={CASE_STUDIES} />
       </section>
 
-      {/* TÉMOIGNAGES — carrousel automatique */}
       <section className="bg-primary/5 border-y border-border">
         <div className="max-w-3xl mx-auto px-6 py-16">
-            <TestimonialCarousel items={TESTIMONIALS} />
+          <TestimonialCarousel items={TESTIMONIALS} />
         </div>
       </section>
 
-      {/* ILS NOUS FONT CONFIANCE */}
       <section>
         <div className="max-w-7xl mx-auto px-6 py-16">
           <p className="font-heading font-bold text-sm md:text-base uppercase tracking-widest text-text text-center mb-8">
@@ -57,7 +50,6 @@ export default function RealisationsPage() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
       <section>
         <div className="max-w-7xl mx-auto px-6 pb-20">
           <div className="bg-primary rounded-3xl px-8 py-16 text-center">
@@ -65,13 +57,10 @@ export default function RealisationsPage() {
               Votre projet pourrait être le prochain
             </h2>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Button variant="primary">Démarrer mon projet</Button>
-              <Button
-                variant="ghost"
-                className="!text-white !border !border-white/30 hover:!bg-white/10"
-              >
+              <ModalButton type="devis" variant="primary">Démarrer mon projet</ModalButton>
+              <ModalButton type="rdv" variant="ghost" className="!text-white !border !border-white/30 hover:!bg-white/10">
                 Prendre rendez-vous
-              </Button>
+              </ModalButton>
             </div>
           </div>
         </div>

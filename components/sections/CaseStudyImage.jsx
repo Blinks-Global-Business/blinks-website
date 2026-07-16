@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 
-export default function CaseStudyImage({ src, alt }) {
+export default function CaseStudyImage({ src, alt, className = "" }) {
   const [error, setError] = useState(false);
 
   if (!src || error) {
     return (
-      <div className="w-full h-full flex items-center justify-center bg-border">
+      <div className={`flex items-center justify-center bg-border ${className}`}>
         <span className="font-body text-xs text-text-muted">Image à intégrer</span>
       </div>
     );
@@ -18,7 +18,7 @@ export default function CaseStudyImage({ src, alt }) {
       src={src}
       alt={alt}
       onError={() => setError(true)}
-      className="w-full h-full object-cover"
+      className={`object-cover ${className}`}
     />
   );
 }

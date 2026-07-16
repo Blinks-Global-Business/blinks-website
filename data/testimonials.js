@@ -11,7 +11,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "Nous cherchions un partenaire capable de nous suivre sur la durée, pas juste un prestataire ponctuel. C'est exactement ce que BLINKS nous apporte.",
+      "Nous cherchions un partenaire capable de nous suivre sur la durée, pas juste un prestataire ponctuel. C'est exactement ce que Blinks Global Business nous apporte.",
     author: "Responsable Digital, HealthConnect",
   },
 ];

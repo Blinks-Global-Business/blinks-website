@@ -1,9 +1,8 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const body = await request.json();
     const { name, email, phone, company, subject, message } = body;
@@ -16,7 +15,7 @@ export async function POST(request) {
     }
 
     await resend.emails.send({
-      from: "Site Blinks Global Business <onboarding@resend.dev>", // à remplacer par un email vérifié sur ton domaine plus tard
+      from: "Site Blinks Global Business <contact@blinksglobalbusiness.com>",
       to: process.env.CONTACT_EMAIL_TO,
       replyTo: email,
       subject: `[Contact site] ${subject || "Nouveau message"} — ${name}`,

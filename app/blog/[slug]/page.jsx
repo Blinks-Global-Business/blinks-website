@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
   if (!post) return { title: "Article introuvable - Blinks Global Business" };
 
   return {
-    title: `${post.title} | Blog BLINKS`,
+    title: `${post.title} - Blog Blinks Global Business`,
     description: post.excerpt,
   };
 }

@@ -1,10 +1,28 @@
-import { Lightbulb, PenTool, Code2, ShieldCheck, Rocket, Wrench } from "lucide-react";
+import { Search, LineChart, Rocket, TrendingUp } from "lucide-react";
 
 export const METHODOLOGY_STEPS = [
-  { icon: Lightbulb, label: "Compréhension", description: "Analyse de vos besoins et audit stratégique." },
-  { icon: PenTool, label: "Conception", description: "UX/UI design et architecture technique." },
-  { icon: Code2, label: "Développement", description: "Codage agile et itérations régulières." },
-  { icon: ShieldCheck, label: "Validation", description: "Tests rigoureux et assurance qualité." },
-  { icon: Rocket, label: "Déploiement", description: "Mise en ligne et monitoring initial." },
-  { icon: Wrench, label: "Maintenance", description: "Suivi technique et évolutions continues." },
+  {
+    icon: Search,
+    letter: "D",
+    label: "Diagnostic",
+    description: "Nous analysons votre organisation, vos besoins et vos défis digitaux.",
+  },
+  {
+    icon: LineChart,
+    letter: "A",
+    label: "Analyse",
+    description: "Nous analysons les données et définissons une stratégie digitale sur-mesure.",
+  },
+  {
+    icon: TrendingUp,
+    letter: "R",
+    label: "Résultats",
+    description: "Nous mettons en œuvre, mesurons les résultats et ajustons pour maximiser la performance.",
+  },
+  {
+    icon: Rocket,
+    letter: "E",
+    label: "Expansion",
+    description: "Nous optimisons et développons vos solutions pour assurer une croissance durable.",
+  },
 ];
