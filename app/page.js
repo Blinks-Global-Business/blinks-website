@@ -17,8 +17,8 @@ import { CATEGORY_ICONS } from "@/lib/serviceIcons";
 
 const KPIS = [
   { label: "Clients accompagnés", value: "10+" },
-  { label: "Projets livrés", value: "50+" },
-  { label: "Années d'expertise", value: "7" },
+  { label: "Projets livrés", value: "25+" },
+  { label: "Années d'expertise", value: "10" },
   { label: "Taux de satisfaction", value: "98%" },
 ];
 const KPIS_LOOP = [...KPIS, ...KPIS];
@@ -54,7 +54,7 @@ export default function HomePage() {
             Propulsez votre <span className="text-primary">transformation digitale</span>
           </h1>
           <p className="font-body text-text-muted text-lg mb-8 max-w-md">
-            Accompagnement expert pour digitaliser vos processus, booster vos ventes et prendre de meilleures décisions.
+            Accompagnement expert pour digitaliser vos process, augmenter votre chiffre d'affaire booster votre visibilité.
           </p>
           <div className="flex flex-wrap gap-4">
             <ModalButton type="rdv" variant="primary">Prendre rendez-vous</ModalButton>
@@ -88,12 +88,11 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-6 py-20 text-center">
           <p className="font-body text-xs uppercase tracking-widest text-primary font-semibold mb-4">Notre mission</p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-text mb-6 leading-tight">
-            Redéfinir les frontières du possible pour les entreprises globales
+            Faire de la transformation digitale un accélérateur de croissance, pas une contrainte
           </h2>
           <p className="font-body text-text-muted leading-relaxed">
-            Chez Blinks Global Business, nous ne nous contentons pas de conseiller ; nous co-créons l'avenir. Notre approche
-            fusionne l'intelligence stratégique de haut niveau avec une maîtrise technique de pointe pour
-            transformer des défis complexes en avantages compétitifs durables.
+            Chez Blinks Global Business, nous ne conseillons pas depuis l'extérieur : nous co-construisons avec vous. 
+            En alliant vision stratégique et excellence technique, nous transformons vos défis les plus complexes en résultats mesurables
           </p>
         </div>
       </section>

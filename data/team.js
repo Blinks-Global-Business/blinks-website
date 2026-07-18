@@ -1,7 +1,7 @@
 export const TEAM_MEMBERS = [
   {
     name: "Aïssé BA NACHBAUER",
-    role: "Fondatrice & CEO",
+    role: "Directrice Commerciale",
     photo: "/images/team/aisséba.jpg",
     linkedin: "https://www.linkedin.com/in/aïssé-ba-madeinafrica?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },

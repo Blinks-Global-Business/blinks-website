@@ -189,31 +189,4 @@ export const SERVICE_CATEGORIES = [
       },
     ],
   },
-  {
-    id: "formation-accompagnement",
-    label: "Formation & Accompagnement",
-    services: [
-      {
-        id: "formations-sur-mesure",
-        name: "Formations sur-mesure",
-        probleme: "Des équipes qui manquent de compétences digitales, IA ou marketing pour suivre la transformation.",
-        solution: "Formations sur-mesure en digital, intelligence artificielle, marketing, vente et outils digitaux.",
-        benefices: ["Montée en compétences rapide", "Autonomie des équipes", "Adoption facilitée des outils"],
-      },
-      {
-        id: "ateliers-coaching",
-        name: "Ateliers pratiques & coaching",
-        probleme: "Des formations théoriques qui ne se traduisent pas en changements concrets sur le terrain.",
-        solution: "Ateliers pratiques et coaching individuel ou collectif pour ancrer durablement les nouvelles pratiques.",
-        benefices: ["Application concrète immédiate", "Accompagnement personnalisé", "Résultats mesurables"],
-      },
-      {
-        id: "accompagnement-changement",
-        name: "Accompagnement au changement",
-        probleme: "Une résistance interne au changement qui freine l'adoption des nouvelles solutions digitales et IA.",
-        solution: "Sensibilisation à la culture digitale et IA, accompagnement au changement et suivi continu.",
-        benefices: ["Adoption facilitée en interne", "Culture digitale renforcée", "Support continu assuré"],
-      },
-    ],
-  },
 ];

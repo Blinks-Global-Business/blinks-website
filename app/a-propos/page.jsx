@@ -11,10 +11,10 @@ export const metadata = {
 };
 
 const ABOUT_KPIS = [
-  { label: "Années d'expertise", value: "7" },
+  { label: "Années d'expertise", value: "10" },
   { label: "Clients accompagnés", value: "10+" },
   { label: "Pays desservis", value: "3" },
-  { label: "Membres de l'équipe", value: "12+" },
+  { label: "Membres de l'équipe", value: "10+" },
 ];
 
 export default function AboutPage() {

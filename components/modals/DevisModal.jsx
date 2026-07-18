@@ -95,10 +95,10 @@ export default function DevisModal() {
             className="border border-border rounded-md px-4 py-2.5 font-body text-sm focus:border-primary outline-none"
           >
             <option value="">Budget estimatif</option>
-            <option>Moins de 1 000 000 FCFA</option>
+            <option>Moins de 500 000 FCFA</option>
+            <option>500 000 FCFA – 1 000 000 FCFA</option>
             <option>1 000 000 FCFA – 5 000 000 FCFA</option>
-            <option>5 000 000 FCFA – 10 000 000 FCFA</option>
-            <option>Plus de 10 00 000 FCFA</option>
+            <option>Plus de 5 00 000 FCFA</option>
           </select>
         </div>
         <textarea
