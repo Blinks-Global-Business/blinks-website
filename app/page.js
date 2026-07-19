@@ -31,9 +31,9 @@ const WHY_US = [
 ];
 
 const CASE_STUDIES_PREVIEW = [
-  { sector: "MEDIA", title: "De l'idée à la concrétisation : Thiaré TV", image: "/images/realisations/healthconnect.jpg" },
-  { sector: "ASSOCIATION", title: "Identité de marque pour Baobab Care", image: "/images/realisations/innovatech.jpg" },
-  { sector: "France", title: "Refonte de marque pour Huma", image: "/images/realisations/datagov.jpg" },
+  { sector: "MEDIA", title: "De l'idée à la concrétisation : Thiaré TV", metrics: [ { value: "0 → 1", label: "Présence digitale créée" }, { value: "Site + Réseaux", label: "Écosystème lancé" }, { value: "Partenariats", label: "Activés" }, ], image: "/images/realisations/healthconnect.jpg" },
+  { sector: "ASSOCIATION", title: "Identité de marque pour Baobab Care", metrics: [ { value: "Visuels", label: "Impact renforcé" }, { value: "Dons", label: "Campagnes optimisées" }, { value: "Marque", label: "À impact social" }, ], image: "/images/realisations/innovatech.jpg" },
+  { sector: "Éducation", title: "Stratégie de lancement pour GS2M", metrics: [ { value: "1000+", label: "Élèves" }, { value: "Oct. 2026", label: "Lancement accéléré" }, { value: "Stratégie", label: "Long terme activée" }, ], image: "/images/realisations/datagov.jpg" },
 ];
 
 const TRUSTED_BY = [

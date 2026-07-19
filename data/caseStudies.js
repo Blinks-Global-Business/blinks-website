@@ -1,86 +1,88 @@
 export const CASE_STUDY_FILTERS = [
   { id: "tous", label: "Tous" },
-  { id: "marketing-communication", label: "Marketing & Communication" },
-  { id: "ia-automatisation", label: "IA & Automatisation" },
-  { id: "performance-commerciale", label: "Performance Commerciale" },
-  { id: "developpement-digital", label: "Développement Digital" },
-  { id: "audiovisuel-media", label: "Audiovisuel & Média" },
+  { id: "marketing-croissance-commerciale", label: "Marketing & Croissance Commerciale" },
+  { id: "digital-intelligence-artificielle", label: "Digital & Intelligence Artificielle" },
+  { id: "image-marque-design", label: "Image de Marque & Design" },
+  { id: "publicite-media-audiovisuel", label: "Publicité, Média & Audiovisuel" },
 ];
 
 export const CASE_STUDIES = [
   {
-    id: "archiprobat",
-    category: "marketing-croissance-commerciale",
-    sector: "BTP",
-    title: "Accompagnement Croissance pour Archiprobat",
-    challenge: "Une entreprise de BTP sénégalaise en pleine croissance, avec un besoin de structurer sa présence digitale et son pipeline commercial.",
-    content: `Contenu détaillé à enrichir avec les résultats concrets une fois obtenus auprès de la cliente.`,
-    image: "/images/realisations/archiprobat.jpg",
-    metrics: [],
-  },
-  {
     id: "thiare-tv",
     category: "image-marque-design",
-    sector: "Média",
+    sector: "Web TV communautaire",
     title: "De l'idée à la concrétisation : Thiaré TV",
     challenge: "Une web TV communautaire sénégalaise à lancer de zéro : aucune identité de marque, aucune présence digitale existante.",
-    content: `Blinks Global Business a accompagné Thiaré TV de la conception à la mise en ligne : création de logo, identité visuelle, charte graphique, étude de marché, stratégie d'entreprise et site internet.`,
+    content: `Blinks Global Business a accompagné Thiaré TV de la conception à la mise en ligne : création de logo, identité visuelle, charte graphique, étude de marché, stratégie d'entreprise et site internet.
+
+De zéro à une présence digitale complète, activée et performante — logo, site, réseaux sociaux et partenariats déployés.`,
     image: "/images/realisations/thiare-tv.jpg",
-    metrics: [],
+    metrics: [
+      { value: "0 → 1", label: "Présence digitale créée" },
+      { value: "Site + Réseaux", label: "Écosystème lancé" },
+      { value: "Partenariats", label: "Activés" },
+    ],
   },
   {
-    id: "gs2m",
-    category: "marketing-croissance-commerciale",
-    sector: "Éducation",
-    title: "Visibilité digitale pour GS2M",
-    challenge: "Une école privée sénégalaise de plus de 1000 élèves, avec un besoin de renforcer sa visibilité et son recrutement via la publicité digitale.",
-    content: `Contenu détaillé à enrichir.`,
-    image: "/images/realisations/gs2m.jpg",
-    metrics: [],
-  },
-  {
-    id: "huma",
-    category: "image-marque-design",
-    sector: "France",
-    title: "Refonte de marque pour Huma",
-    challenge: "Une marque française avec une identité à moderniser et une présence digitale à construire de zéro.",
-    content: `Refonte complète du logo, création des réseaux sociaux, développement du site internet et community management continu.`,
-    image: "/images/realisations/huma.jpg",
-    metrics: [],
+    id: "archiprobat",
+    category: "digital-intelligence-artificielle",
+    sector: "BTP",
+    title: "Refonte digitale pour Archiprobat",
+    challenge: "Une entreprise de BTP sénégalaise dont l'image et la présence digitale ne reflétaient plus son positionnement sur le marché.",
+    content: `Blinks Global Business a restructuré l'image d'Archiprobat et maximisé sa crédibilité marché : nouveau logo, site internet avec agent IA intégré, présence Google optimisée.
+
+Résultat : les clients perçoivent désormais l'entreprise différemment, qui domine maintenant son secteur sur son marché local.`,
+    image: "/images/realisations/archiprobat.jpg",
+    metrics: [
+      { value: "Nouveau", label: "Logo & identité" },
+      { value: "Agent IA", label: "Intégré au site" },
+      { value: "Google", label: "Présence optimisée" },
+    ],
   },
   {
     id: "kuky",
     category: "marketing-croissance-commerciale",
     sector: "Santé & bien-être",
-    title: "Accompagnement Croissance pour Parapharmacie Kuky+++",
-    challenge: "Une parapharmacie sénégalaise cherchant à structurer sa stratégie éditoriale et son identité de marque.",
-    content: `Création de logo et mise en place d'une stratégie éditoriale complète.`,
+    title: "Écosystème digital pour Parapharmacie Kuky+++",
+    challenge: "Une parapharmacie sénégalaise cherchant à structurer sa présence digitale et son organisation commerciale pour soutenir sa croissance.",
+    content: `Blinks Global Business a déployé un écosystème digital complet : WhatsApp Business actif 24h/24, service Click & Collect opérationnel, équipe formée et autonome.
+
+Le chiffre d'affaires de la parapharmacie a scalé grâce à cette digitalisation de bout en bout.`,
     image: "/images/realisations/kuky.jpg",
-    metrics: [],
+    metrics: [
+      { value: "24h/24", label: "WhatsApp Business actif" },
+      { value: "Click & Collect", label: "Opérationnel" },
+      { value: "CA", label: "En croissance" },
+    ],
+  },
+  {
+    id: "gs2m",
+    category: "marketing-croissance-commerciale",
+    sector: "Éducation",
+    title: "Stratégie de lancement pour GS2M",
+    challenge: "Un groupe scolaire sénégalais de plus de 1000 élèves ayant besoin d'une stratégie à long terme pour structurer sa vision et accélérer son développement.",
+    content: `Blinks Global Business a activé une stratégie à long terme pour l'établissement — pas une simple prestation ponctuelle, mais un véritable accompagnement qui structure la vision de l'école et accélère son lancement prévu en octobre 2026.`,
+    image: "/images/realisations/gs2m.jpg",
+    metrics: [
+      { value: "1000+", label: "Élèves" },
+      { value: "Oct. 2026", label: "Lancement accéléré" },
+      { value: "Stratégie", label: "Long terme activée" },
+    ],
   },
   {
     id: "baobab-care",
     category: "image-marque-design",
-    sector: "Association",
-    title: "Identité de marque pour Baobab Care",
-    challenge: "Une association caritative française à impact social, avec un besoin de visibilité et de crédibilité digitale.",
-    content: `Contenu détaillé à enrichir.`,
+    sector: "Association caritative",
+    title: "Une marque à impact pour Baobab Care",
+    challenge: "Une association caritative française à impact social, avec un besoin de visuels percutants et d'une stratégie digitale pour maximiser l'effet de ses campagnes.",
+    content: `Blinks Global Business a transformé l'association en marque à impact : visuels percutants, campagnes de dons optimisées, stratégie digitale déployée avec excellence.
+
+Les bénéficiaires de l'association en ressentent directement les effets.`,
     image: "/images/realisations/baobab-care.jpg",
-    metrics: [],
-  },
-  {
-    id: "mine-cosmetics",
-    category: "image-marque-design",
-    sector: "Beauté & cosmétique",
-    title: "Blinks Global Business x Mine Cosmetics",
-    challenge: "Contenu détaillé à enrichir.",
-    content: `Contenu détaillé à enrichir.`,
-    image: "/images/realisations/mine-cosmetics.jpg",
-    metrics: [],
+    metrics: [
+      { value: "Visuels", label: "Impact renforcé" },
+      { value: "Dons", label: "Campagnes optimisées" },
+      { value: "Marque", label: "À impact social" },
+    ],
   },
 ];
-
-export const TESTIMONIAL = {
-  quote: "Blinks Global Business a converti une idée en web TV professionnelle et crédible; logo, site, réseaux sociaux, partenariats. De zéro à une présencedigitale complète, activée et performante.",
-  author: "Equipe Thiaré TV",
-}
