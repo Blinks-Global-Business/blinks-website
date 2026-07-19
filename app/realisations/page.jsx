@@ -58,7 +58,7 @@ export default function RealisationsPage() {
               Votre projet pourrait être le prochain
             </h2>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <ModalButton type="devis" variant="primary">Démarrer mon projet</ModalButton>
+              <ModalButton type="devis" variant="primary">Commandez votre diagnostic digital</ModalButton>
               <ModalButton type="rdv" variant="ghost" className="!text-white !border !border-white/30 hover:!bg-white/10">
                 Prendre rendez-vous
               </ModalButton>

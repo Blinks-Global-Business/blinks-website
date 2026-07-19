@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import BlogImage from "@/components/sections/BlogImage";
 import { BLOG_POSTS, BLOG_CATEGORIES } from "@/data/blogPosts";
+import BlogContent from "@/components/sections/BlogContent";
 
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString("fr-FR", {
@@ -84,9 +85,7 @@ export default async function BlogPostPage({ params }) {
 
       {/* CONTENU */}
       <section className="max-w-3xl mx-auto px-6 py-14">
-        <div className="font-body text-text leading-relaxed whitespace-pre-line">
-          {post.content}
-        </div>
+        <BlogContent content={post.content} />
       </section>
 
       {/* ARTICLES LIÉS */}

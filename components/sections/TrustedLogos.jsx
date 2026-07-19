@@ -18,7 +18,7 @@ function LogoItem({ name, logo }) {
       src={logo}
       alt={name}
       onError={() => setError(true)}
-      className="h-8 md:h-10 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"
+      className="h-14 md:h-16 w-auto object-contain"
     />
   );
 }

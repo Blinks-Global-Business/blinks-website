@@ -71,12 +71,6 @@ export default function Header() {
         </button>
 
         <div className="md:hidden flex items-center gap-3">
-          <button
-            onClick={() => openModal("rdv")}
-            className="bg-accent text-primary-dark font-body font-medium text-xs px-3 py-2 rounded-md"
-          >
-            RDV
-          </button>
           <button onClick={() => setIsOpen(!isOpen)} className="text-primary" aria-label="Menu">
             {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>

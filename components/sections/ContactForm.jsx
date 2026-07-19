@@ -138,6 +138,7 @@ export default function ContactForm() {
         {status === "loading" && <Loader2 size={16} className="animate-spin" />}
         {status === "loading" ? "Envoi en cours..." : "Envoyer le message"}
       </button>
+      <p> Réponse garantie sous 24h ouvrées.</p>
 
       {status === "success" && (
         <p className="flex items-center gap-2 font-body text-sm text-emerald">

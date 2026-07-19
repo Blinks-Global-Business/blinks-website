@@ -29,7 +29,22 @@ export default function BlogPage() {
       </section>
 
       {/* NEWSLETTER */}
+      {/* NEWSLETTER */}
+<section className="bg-primary/5 border-t border-border">
+  <div className="max-w-7xl mx-auto px-6 py-16">
+    <div className="bg-white rounded-2xl border border-border shadow-md p-10 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div>
+        <h2 className="font-heading font-bold text-xl md:text-2xl text-text mb-2">
+          Restez informé de nos dernières actualités
+        </h2>
+        <p className="font-body text-sm text-text-muted">
+          Rejoignez nos lecteurs qui reçoivent nos analyses mensuelles directement dans leur boîte mail.
+        </p>
+      </div>
       <NewsletterForm />
+    </div>
+  </div>
+</section>
     </>
   );
 }

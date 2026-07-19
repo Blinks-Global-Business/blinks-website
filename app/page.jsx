@@ -11,6 +11,7 @@ import Card from "@/components/ui/Card";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import TrustedLogos from "@/components/sections/TrustedLogos";
 import CaseStudyImage from "@/components/sections/CaseStudyImage";
+import { CASE_STUDIES } from "@/data/caseStudies";
 import { SERVICE_CATEGORIES } from "@/data/services";
 import { ACCOMPAGNEMENTS } from "@/data/pricing";
 import { FAQ_ITEMS } from "@/data/faq";
@@ -30,11 +31,7 @@ const WHY_US = [
   { icon: Handshake, title: "Engagement résultat", description: "Chaque mission est pilotée par des objectifs mesurables et un vrai suivi de performance." },
 ];
 
-const CASE_STUDIES_PREVIEW = [
-  { sector: "MEDIA", title: "De l'idée à la concrétisation : Thiaré TV", metrics: [ { value: "0 → 1", label: "Présence digitale créée" }, { value: "Site + Réseaux", label: "Écosystème lancé" }, { value: "Partenariats", label: "Activés" }, ], image: "/images/realisations/healthconnect.jpg" },
-  { sector: "ASSOCIATION", title: "Identité de marque pour Baobab Care", metrics: [ { value: "Visuels", label: "Impact renforcé" }, { value: "Dons", label: "Campagnes optimisées" }, { value: "Marque", label: "À impact social" }, ], image: "/images/realisations/innovatech.jpg" },
-  { sector: "EDUCATION", title: "Stratégie de lancement pour GS2M", metrics: [ { value: "1000+", label: "Élèves" }, { value: "Oct. 2026", label: "Lancement accéléré" }, { value: "Stratégie", label: "Long terme activée" }, ], image: "/images/realisations/datagov.jpg" },
-];
+const CASE_STUDIES_PREVIEW = CASE_STUDIES.slice(0, 3);
 
 const TRUSTED_BY = [
   { name: "Thiaré TV", logo: "/images/logos/thiare-tv.png" },
@@ -95,13 +92,11 @@ export default function HomePage() {
             Notre mission
           </p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-text mb-6 leading-tight">
-            Derrière chaque projet, une équipe qui vous écoute vraiment
+            Prouver que la transformation digitale change tout
           </h2>
           <p className="font-body text-text-muted leading-relaxed">
-            Chez Blinks Global Business, on ne débarque pas avec des solutions toutes faites.
-            On prend le temps de comprendre votre réalité, vos contraintes, vos ambitions
-            puis on avance à vos côtés, avec des solutions pensées pour vous. Parce qu'une
-            bonne transformation digitale commence toujours par une vraie relation de confiance.
+            On est nés d'une conviction simple : la transformation digitale n'est pas une dépense, c'est le levier de croissance le plus puissant qu'une entreprise puisse activer aujourd'hui. 
+            Chez Blinks Global Business, on existe pour le prouver, projet après projet, résultat après résultat.
           </p>
         </div>
       </section>
@@ -238,25 +233,34 @@ export default function HomePage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {CASE_STUDIES_PREVIEW.map((study) => (
-              <Card key={study.title} className="!p-0 overflow-hidden">
-                <div className="w-full aspect-video">
-                  <CaseStudyImage src={study.image} alt={study.title} />
-                </div>
-                <div className="p-6">
-                  <span className="inline-block bg-primary/10 text-primary text-[11px] font-body font-medium uppercase tracking-wide px-2.5 py-1 rounded mb-4">
-                    {study.sector}
-                  </span>
-                  <h3 className="font-heading font-semibold text-base text-text mb-4">{study.title}</h3>
-                  <div className="flex items-baseline gap-2 mb-4">
-                    <span className="font-heading font-bold text-2xl text-emerald">{study.metric}</span>
-                    <span className="font-body text-xs text-text-muted">{study.metricLabel}</span>
-                  </div>
-                  <Link href="/realisations" className="font-body text-sm text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
-                    Voir l'étude de cas <ArrowRight size={14} />
-                  </Link>
-                </div>
-              </Card>
-            ))}
+  <Card key={study.id} className="!p-0 overflow-hidden">
+    <div className="w-full aspect-video">
+      <CaseStudyImage src={study.image} alt={study.title} />
+    </div>
+    <div className="p-6">
+      <span className="inline-block bg-primary/10 text-primary text-[11px] font-body font-medium uppercase tracking-wide px-2.5 py-1 rounded mb-4">
+        {study.sector}
+      </span>
+      <h3 className="font-heading font-semibold text-base text-text mb-4">{study.title}</h3>
+
+      <div className="flex flex-wrap gap-3 mb-4">
+        {study.metrics.map((m) => (
+          <div key={m.label} className="bg-bg border border-border rounded-lg px-3 py-2">
+            <p className="font-heading font-bold text-sm text-emerald">{m.value}</p>
+            <p className="font-body text-[11px] text-text-muted">{m.label}</p>
+          </div>
+        ))}
+      </div>
+
+      <Link
+        href="/realisations"
+        className="font-body text-sm text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all"
+      >
+        Voir l'étude de cas <ArrowRight size={14} />
+      </Link>
+    </div>
+  </Card>
+))}
           </div>
         </div>
       </section>

@@ -13,8 +13,8 @@ export const metadata = {
 const ABOUT_KPIS = [
   { label: "Années d'expertise", value: "10" },
   { label: "Clients accompagnés", value: "10+" },
-  { label: "Pays desservis", value: "5+" },
-  { label: "Membres de l'équipe", value: "10+" },
+  { label: "Pays desservis", value: "3" },
+  { label: "équipe cœur appuyée par un réseau d'experts certifiés", value: "Une" },
 ];
 
 export default function AboutPage() {
@@ -34,10 +34,9 @@ export default function AboutPage() {
         <div>
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-text mb-5">Notre histoire</h2>
           <p className="font-body text-text-muted leading-relaxed mb-4">
-            Fondé sur la conviction que la technologie ne vaut rien sans une vision stratégique claire, Blinks
-            Global Business a débuté comme un petit collectif de consultants passionnés. En quelques années,
-            nous sommes devenus un partenaire de confiance pour des entreprises, institutions et ONG à travers
-            le monde.
+            Fondé sur la conviction que la technologie ne vaut rien sans vision stratégique, 
+            Blinks Global Business est né comme un collectif de consultants passionnés. 
+            Aujourd'hui, nous accompagnons entreprises, institutions et associations en Afrique de l'Ouest et en Europe avec une ambition simple : des résultats mesurables, projet après projet. 
           </p>
           <p className="font-body text-text-muted leading-relaxed">
             Notre parcours est marqué par une quête constante d'innovation et une compréhension profonde des

@@ -42,9 +42,9 @@ export default function ContactPage() {
               <Phone size={18} className="text-accent shrink-0 mt-0.5" />
               <div>
                 <p className="font-body text-[11px] uppercase tracking-wide text-white/60">Téléphone</p>
-                <p className="font-body text-sm">{SITE.phone1}</p>
-                <p className="font-body text-sm">{SITE.phone2}</p>
-                <p className="font-body text-sm">{SITE.phone3}</p>
+                <p className="flex items-center gap-2">🇫🇷 {SITE.phone2}</p>
+                <p className="flex items-center gap-2">🇧🇯 {SITE.phone1}</p>
+                <p className="flex items-center gap-2">🇸🇳 {SITE.phone3}</p>
               </div>
             </div>
             <div className="flex gap-3">

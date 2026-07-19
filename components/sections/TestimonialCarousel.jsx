@@ -12,7 +12,7 @@ export default function TestimonialCarousel({ items }) {
 
     intervalRef.current = setInterval(() => {
       setIndex((prev) => (prev + 1) % items.length);
-    }, 3000);
+    }, 10000);
 
     return () => clearInterval(intervalRef.current);
   }, [isPaused, items.length]);
