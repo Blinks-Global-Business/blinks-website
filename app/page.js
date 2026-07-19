@@ -64,9 +64,11 @@ export default function HomePage() {
         <div className="relative">
           <div className="absolute -top-5 -right-5 w-full h-full bg-border rounded-xl -z-10" />
           <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl bg-white">
-            <div className="w-full h-full flex items-center justify-center text-text-muted font-body text-sm">
-              Image à intégrer
-            </div>
+            <img
+              src="/images/hero-main.jpg"
+              alt="Équipe Blinks Global Business"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -136,8 +138,12 @@ export default function HomePage() {
       <section>
         <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-14 items-center">
           <div className="relative">
-            <div className="w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg bg-border flex items-center justify-center">
-              <span className="font-body text-sm text-text-muted">Image à intégrer</span>
+            <div className="w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/about/pourquoi-blinks.jpg"
+                alt="Pourquoi choisir Blinks Global Business"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="absolute bottom-6 right-0 translate-x-6 bg-accent rounded-lg px-6 py-5 shadow-xl max-w-[220px]">
               <p className="font-heading font-bold text-xl text-primary-dark">Excellence</p>
