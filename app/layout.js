@@ -7,6 +7,7 @@ import { ModalProvider } from "@/components/providers/ModalProvider";
 import RdvModal from "@/components/modals/RdvModal";
 import DevisModal from "@/components/modals/DevisModal";
 import ScrollToTop from "@/components/ui/ScrollToTop";
+import TarifsModal from "@/components/modals/TarifsModal";
 
 const sora = Sora({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-sora" });
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-inter" });
@@ -29,7 +30,8 @@ export default function RootLayout({ children }) {
           <ScrollToTop/>
           <RdvModal />
           <DevisModal />
-        </ModalProvider>
+          <TarifsModal />
+          </ModalProvider>
       </body>
     </html>
   );

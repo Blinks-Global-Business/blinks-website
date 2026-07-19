@@ -18,7 +18,7 @@ export async function POST(request) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Erreur newsletter:", error);
-    return NextResponse.json({ error: "Erreur d'inscription" }, { status: 500 });
+  console.error("Erreur newsletter:", error);
+  return NextResponse.json({ error: "Erreur d'inscription", detail: error.message }, { status: 500 });
   }
 }

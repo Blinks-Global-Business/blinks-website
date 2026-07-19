@@ -1,14 +1,14 @@
 import { Search, Rocket, TrendingUp as TrendingUpIcon } from "lucide-react";
 import ModalButton from "@/components/ui/ModalButton";
 import ServiceCard from "@/components/sections/ServiceCard";
-import ParcoursCard from "@/components/sections/ParcoursCard";
+import AccompagnementCard from "@/components/sections/AccompagnementCard";
 import { SERVICE_CATEGORIES } from "@/data/services";
 import { METHODOLOGY_STEPS } from "@/data/methodology";
 import { CATEGORY_ICONS } from "@/lib/serviceIcons";
-import { DIAGNOSTIC_OFFER, PARCOURS, A_LA_CARTE, POURQUOI_BLINKS } from "@/data/pricing";
+import { DIAGNOSTIC_OFFER, ACCOMPAGNEMENTS, A_LA_CARTE, POURQUOI_BLINKS } from "@/data/pricing";
 
 export const metadata = {
-  title: "Services & Tarifs | Blinks Global Business",
+  title: "Services & Tarifs - Blinks Global Business",
   description: "Diagnostic, parcours d'accompagnement et prestations à la carte pour votre transformation digitale.",
 };
 
@@ -151,15 +151,15 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="font-heading font-bold text-2xl md:text-3xl text-text mb-3">
-              Trois parcours. Une seule ambition : votre croissance.
+              Trois accompagnements. Une seule ambition : votre croissance.
             </h2>
             <p className="font-body text-text-muted">
               Un accompagnement mensuel tout inclus, sans surprise.
             </p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
-            {PARCOURS.map((p) => (
-              <ParcoursCard key={p.id} parcours={p} />
+            {ACCOMPAGNEMENTS.map((a) => (
+              <AccompagnementCard key={a.id} accompagnement={a} />
             ))}
           </div>
         </div>

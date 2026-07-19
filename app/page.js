@@ -12,6 +12,7 @@ import FaqAccordion from "@/components/sections/FaqAccordion";
 import TrustedLogos from "@/components/sections/TrustedLogos";
 import CaseStudyImage from "@/components/sections/CaseStudyImage";
 import { SERVICE_CATEGORIES } from "@/data/services";
+import { ACCOMPAGNEMENTS } from "@/data/pricing";
 import { FAQ_ITEMS } from "@/data/faq";
 import { CATEGORY_ICONS } from "@/lib/serviceIcons";
 
@@ -133,6 +134,51 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* APERÇU DES ACCOMPAGNEMENTS */}
+<section>
+  <div className="max-w-7xl mx-auto px-6 py-20">
+    <div className="text-center max-w-2xl mx-auto mb-14">
+      <h2 className="font-heading font-bold text-3xl md:text-4xl text-text mb-4">
+        Nos accompagnements
+      </h2>
+      <p className="font-body text-text-muted">
+        Un accompagnement mensuel tout inclus, sans surprise. Vous choisissez le niveau, nous livrons chaque mois.
+      </p>
+    </div>
+
+    <div className="grid sm:grid-cols-3 gap-6">
+      {ACCOMPAGNEMENTS.map((a) => (
+        <div
+          key={a.id}
+          className={`rounded-xl border p-6 text-center ${
+            a.recommended ? "border-accent shadow-lg" : "border-border"
+          }`}
+        >
+          {a.recommended && (
+            <span className="inline-block bg-accent text-primary-dark font-body font-semibold text-[10px] px-3 py-1 rounded-full mb-3">
+              ★ RECOMMANDÉ
+            </span>
+          )}
+          <h3 className="font-heading font-bold text-text mb-1">{a.name}</h3>
+          <p className="font-heading font-bold text-2xl text-primary mb-1">
+            {a.price} <span className="text-sm font-body text-text-muted">FCFA{a.period}</span>
+          </p>
+          <p className="font-body text-xs text-text-muted">{a.engagement}</p>
+        </div>
+      ))}
+    </div>
+
+    <div className="text-center mt-10">
+      <Link
+        href="/services#tarifs"
+        className="font-body text-sm text-primary font-medium inline-flex items-center gap-1 hover:gap-2 transition-all"
+      >
+        Voir tous les détails et tarifs <ArrowRight size={16} />
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* POURQUOI BLINKS */}
       <section>

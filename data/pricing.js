@@ -16,7 +16,7 @@ export const DIAGNOSTIC_OFFER = {
 export const PARCOURS = [
   {
     id: "visibilite",
-    name: "Parcours Visibilité",
+    name: "Accompagnement Visibilité",
     tagline: "Votre marque devient visible et régulière pendant que vous dirigez.",
     priceOriginal: "199 000",
     price: "149 000",
@@ -41,7 +41,7 @@ export const PARCOURS = [
   },
   {
     id: "croissance",
-    name: "Parcours Croissance",
+    name: "Accompagnement Croissance",
     tagline: "Une marque, un site et une machine à vendre construits pour vous.",
     priceOriginal: "449 000",
     price: "349 000",
@@ -68,7 +68,7 @@ export const PARCOURS = [
   },
   {
     id: "excellence",
-    name: "Parcours Excellence",
+    name: "Accompagnement Excellence",
     tagline: "Votre direction digitale externalisée. Tout, sans limite.",
     priceOriginal: "750 000",
     price: "590 000",
