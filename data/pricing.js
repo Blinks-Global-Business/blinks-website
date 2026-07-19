@@ -13,7 +13,7 @@ export const DIAGNOSTIC_OFFER = {
   highlight: "Le montant du diagnostic est intégralement déduit de votre première facture si vous souscrivez un parcours ou une prestation dans les 30 jours. Votre diagnostic devient gratuit.",
 };
 
-export const PARCOURS = [
+export const ACCOMPAGNEMENTS = [
   {
     id: "visibilite",
     name: "Accompagnement Visibilité",

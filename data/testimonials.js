@@ -12,7 +12,7 @@ export const TESTIMONIALS = [
   {
     quote:
       "Blinks Global Business a déployé mon écosystème digital complet; WhatsApp Business actif 24h/24, Click & Collect opérationnel, équipe formée et autonome. Mon chiffre d'affaires a scalé.",
-    author: "Dirigeante, Parapharmacie KURY+++",
+    author: "Dirigeante, Parapharmacie KUKY+++",
   },
   {
     quote:

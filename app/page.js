@@ -31,17 +31,19 @@ const WHY_US = [
 ];
 
 const CASE_STUDIES_PREVIEW = [
-  { sector: "ONG", title: "Transformation digitale de HealthConnect", metric: "+45%", metricLabel: "Conversion", image: "/images/realisations/healthconnect.jpg" },
-  { sector: "PME", title: "Transformation digitale d'Innovatech", metric: "-25%", metricLabel: "Coûts d'exploitation", image: "/images/realisations/innovatech.jpg" },
-  { sector: "Institution", title: "Souveraineté de DataGov", metric: "2M+", metricLabel: "Utilisateurs", image: "/images/realisations/datagov.jpg" },
+  { sector: "MEDIA", title: "De l'idée à la concrétisation : Thiaré TV", image: "/images/realisations/healthconnect.jpg" },
+  { sector: "ASSOCIATION", title: "Identité de marque pour Baobab Care", image: "/images/realisations/innovatech.jpg" },
+  { sector: "France", title: "Refonte de marque pour Huma", image: "/images/realisations/datagov.jpg" },
 ];
 
 const TRUSTED_BY = [
-  { name: "Techno", logo: "/images/logos/techno.png" },
-  { name: "Luxury.co", logo: "/images/logos/luxuryco.png" },
-  { name: "GlobalBank", logo: "/images/logos/globalbank.png" },
-  { name: "Aerospace", logo: "/images/logos/aerospace.png" },
-  { name: "FutureHub", logo: "/images/logos/futurehub.png" },
+  { name: "Thiaré TV", logo: "/images/logos/thiare-tv.png" },
+  { name: "GS2M", logo: "/images/logos/g2sm.png" },
+  { name: "BAOBAB CARE", logo: "/images/logos/baobab.png" },
+  { name: "Mine Cosmetics", logo: "/images/logos/mine.png" },
+  { name: "Huma", logo: "/images/logos/huma.png" },
+  { name: "KUKY+++", logo: "/images/logos/kuky+++.png" },
+  { name: "ARCHIPROBAT", logo: "/images/logos/archiprobat.png" },
 ];
 
 export default function HomePage() {

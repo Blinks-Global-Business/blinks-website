@@ -9,153 +9,78 @@ export const CASE_STUDY_FILTERS = [
 
 export const CASE_STUDIES = [
   {
-    id: "healthconnect",
-    category: "developpement-digital",
-    sector: "ONG",
-    title: "Transformation digitale de HealthConnect",
-    challenge: "Modernisation des processus et optimisation de l'expérience utilisateur pour une plateforme de coordination médicale internationale.",
-    content: `HealthConnect coordonnait ses équipes médicales à travers plusieurs pays via des outils dispersés (emails, tableurs, appels téléphoniques), rendant le suivi des interventions lent et sujet à erreurs.
-
-Blinks Global Business a conçu et développé une plateforme web centralisée permettant la coordination en temps réel des équipes, le suivi des dossiers patients et la génération automatique de rapports d'intervention.
-
-Le projet a été mené en 8 semaines, de l'audit initial au déploiement, avec une phase de formation des équipes terrain pour garantir une adoption rapide.`,
-    image: "/images/realisations/healthconnect.jpg",
-    metrics: [
-      { value: "+45%", label: "Conversion" },
-      { value: "-30%", label: "Temps de gestion" },
-      { value: "2x", label: "Leads qualifiés" },
-    ],
+    id: "archiprobat",
+    category: "marketing-croissance-commerciale",
+    sector: "BTP",
+    title: "Accompagnement Croissance pour Archiprobat",
+    challenge: "Une entreprise de BTP sénégalaise en pleine croissance, avec un besoin de structurer sa présence digitale et son pipeline commercial.",
+    content: `Contenu détaillé à enrichir avec les résultats concrets une fois obtenus auprès de la cliente.`,
+    image: "/images/realisations/archiprobat.jpg",
+    metrics: [],
   },
   {
-    id: "innovatech",
-    category: "developpement-digital",
-    sector: "PME",
-    title: "Transformation digitale d'Innovatech",
-    challenge: "Déploiement d'un écosystème CRM/ERP sur-mesure pour automatiser la chaîne de valeur industrielle.",
-    content: `Innovatech gérait sa production, ses stocks et sa facturation via des outils non connectés entre eux, générant des doubles saisies et des pertes de temps considérables.
-
-Blinks Glbal Business a développé un écosystème CRM/ERP sur-mesure, connectant la gestion commerciale, les stocks et la facturation dans une seule plateforme, avec des tableaux de bord décisionnels pour la direction.
-
-Résultat : une chaîne de valeur entièrement digitalisée et une visibilité en temps réel sur l'activité de l'entreprise.`,
-    image: "/images/realisations/innovatech.jpg",
-    metrics: [
-      { value: "+60%", label: "Productivité" },
-      { value: "-25%", label: "Coûts d'exploitation" },
-      { value: "+20%", label: "Marge nette" },
-    ],
+    id: "thiare-tv",
+    category: "image-marque-design",
+    sector: "Média",
+    title: "De l'idée à la concrétisation : Thiaré TV",
+    challenge: "Une web TV communautaire sénégalaise à lancer de zéro : aucune identité de marque, aucune présence digitale existante.",
+    content: `Blinks Global Business a accompagné Thiaré TV de la conception à la mise en ligne : création de logo, identité visuelle, charte graphique, étude de marché, stratégie d'entreprise et site internet.`,
+    image: "/images/realisations/thiare-tv.jpg",
+    metrics: [],
   },
   {
-    id: "datagov",
-    category: "developpement-digital",
-    sector: "Institution",
-    title: "Souveraineté de DataGov",
-    challenge: "Mise en place d'une infrastructure de données sécurisée pour la gestion des services publics dématérialisés.",
-    content: `Une institution publique souhaitait dématérialiser ses services citoyens tout en garantissant une souveraineté totale sur les données sensibles collectées.
-
-Blinks Global Business a conçu une infrastructure sécurisée hébergée localement, avec authentification forte, chiffrement des données et disponibilité continue pour des millions d'usagers.
-
-Le projet a nécessité une coordination étroite avec les équipes de cybersécurité de l'institution pour garantir la conformité aux normes en vigueur.`,
-    image: "/images/realisations/datagov.jpg",
-    metrics: [
-      { value: "100%", label: "Sécurisé" },
-      { value: "2M+", label: "Utilisateurs" },
-      { value: "24/7", label: "Disponibilité" },
-    ],
+    id: "gs2m",
+    category: "marketing-croissance-commerciale",
+    sector: "Éducation",
+    title: "Visibilité digitale pour GS2M",
+    challenge: "Une école privée sénégalaise de plus de 1000 élèves, avec un besoin de renforcer sa visibilité et son recrutement via la publicité digitale.",
+    content: `Contenu détaillé à enrichir.`,
+    image: "/images/realisations/gs2m.jpg",
+    metrics: [],
   },
   {
-    id: "retailone",
-    category: "ia-automatisation",
-    sector: "Entreprise",
-    title: "IA prédictive pour RetailOne",
-    challenge: "Optimisation des stocks via un moteur d'intelligence artificielle prédictive basé sur le comportement client.",
-    content: `RetailOne faisait face à des ruptures de stock fréquentes sur ses produits phares, ainsi qu'à des surstocks coûteux sur d'autres références.
-
-Blinks Global Business a déployé un moteur d'IA prédictive analysant l'historique de vente, la saisonnalité et les tendances de comportement client pour anticiper la demande avec précision.
-
-Le système s'intègre directement à l'outil de gestion des stocks existant, avec des alertes automatiques de réapprovisionnement.`,
-    image: "/images/realisations/retailone.jpg",
-    metrics: [
-      { value: "-18%", label: "Stock" },
-      { value: "+12%", label: "Chiffre d'affaires" },
-      { value: "-40%", label: "Ruptures" },
-    ],
+    id: "huma",
+    category: "image-marque-design",
+    sector: "France",
+    title: "Refonte de marque pour Huma",
+    challenge: "Une marque française avec une identité à moderniser et une présence digitale à construire de zéro.",
+    content: `Refonte complète du logo, création des réseaux sociaux, développement du site internet et community management continu.`,
+    image: "/images/realisations/huma.jpg",
+    metrics: [],
   },
   {
-    id: "ecoflow",
-    category: "ia-automatisation",
-    sector: "Industrie",
-    title: "Smart Factory pour EcoFlow",
-    challenge: "Digitalisation d'une usine éco-responsable pour un suivi en temps réel de l'empreinte carbone.",
-    content: `EcoFlow souhaitait piloter précisément son impact environnemental mais ne disposait d'aucun outil de mesure en temps réel sur ses lignes de production.
-
-Blinks Global Business a mis en place un système de capteurs connectés couplé à des tableaux de bord d'automatisation, permettant un suivi continu de la consommation énergétique et des émissions carbone.
-
-Les équipes peuvent désormais ajuster la production en temps réel pour optimiser l'efficacité énergétique.`,
-    image: "/images/realisations/ecoflow.jpg",
-    metrics: [
-      { value: "-40%", label: "CO2" },
-      { value: "Real-time", label: "Suivi" },
-      { value: "+15%", label: "Efficacité" },
-    ],
+    id: "kuky",
+    category: "marketing-croissance-commerciale",
+    sector: "Santé & bien-être",
+    title: "Accompagnement Croissance pour Parapharmacie Kuky+++",
+    challenge: "Une parapharmacie sénégalaise cherchant à structurer sa stratégie éditoriale et son identité de marque.",
+    content: `Création de logo et mise en place d'une stratégie éditoriale complète.`,
+    image: "/images/realisations/kuky.jpg",
+    metrics: [],
   },
   {
-    id: "urbanshop",
-    category: "developpement-digital",
-    sector: "E-commerce",
-    title: "Refonte e-commerce d'UrbanShop",
-    challenge: "Un tunnel d'achat vieillissant provoquait un taux d'abandon panier élevé et freinait la croissance.",
-    content: `UrbanShop perdait une part importante de ses visiteurs en cours de commande, avec un tunnel d'achat lent et peu intuitif sur mobile.
-
-Blinks Global Business a entièrement repensé l'expérience d'achat : checkout simplifié en 2 étapes, paiement optimisé et refonte complète du parcours mobile.
-
-Le nouveau site a été déployé progressivement, avec des tests A/B pour valider chaque amélioration avant généralisation.`,
-    image: "/images/realisations/urbanshop.jpg",
-    metrics: [
-      { value: "+35%", label: "Panier moyen" },
-      { value: "-20%", label: "Abandon panier" },
-      { value: "3x", label: "Trafic mobile" },
-    ],
+    id: "baobab-care",
+    category: "image-marque-design",
+    sector: "Association",
+    title: "Identité de marque pour Baobab Care",
+    challenge: "Une association caritative française à impact social, avec un besoin de visibilité et de crédibilité digitale.",
+    content: `Contenu détaillé à enrichir.`,
+    image: "/images/realisations/baobab-care.jpg",
+    metrics: [],
   },
   {
-    id: "luxbrand",
-    category: "marketing-communication",
-    sector: "Luxe",
-    title: "Repositionnement digital de LuxBrand",
-    challenge: "Une marque premium peinait à exister sur les réseaux sociaux face à une concurrence plus visible digitalement.",
-    content: `LuxBrand disposait d'un excellent produit mais d'une présence digitale incohérente, avec une identité visuelle datée et une communauté peu engagée.
-
-Blinks Global Business a mené une refonte complète du branding digital, accompagnée d'une stratégie de contenu et de community management sur-mesure pour repositionner la marque comme référence premium.
-
-En 4 mois, la marque a retrouvé une identité forte et cohérente sur l'ensemble de ses canaux digitaux.`,
-    image: "/images/realisations/luxbrand.jpg",
-    metrics: [
-      { value: "+120%", label: "Engagement" },
-      { value: "+3x", label: "Communauté" },
-      { value: "+28%", label: "Trafic site" },
-    ],
-  },
-  {
-    id: "salesboost",
-    category: "performance-commerciale",
-    sector: "B2B",
-    title: "Accélération commerciale pour SalesBoost",
-    challenge: "Une entreprise B2B manquait de leads qualifiés pour alimenter son équipe commerciale interne.",
-    content: `SalesBoost disposait d'une équipe commerciale performante mais sans flux constant de prospects qualifiés pour l'alimenter.
-
-Blinks Global Business a mis en place un tunnel d'acquisition complet, couplé à un CRM structuré et une équipe commerciale externalisée en renfort pour accélérer la prospection B2B.
-
-Les résultats ont été visibles dès le second mois, avec un pipeline commercial largement renforcé.`,
-    image: "/images/realisations/salesboost.jpg",
-    metrics: [
-      { value: "+80%", label: "Leads qualifiés" },
-      { value: "+35%", label: "Taux de closing" },
-      { value: "2.5x", label: "Pipeline" },
-    ],
+    id: "mine-cosmetics",
+    category: "image-marque-design",
+    sector: "Beauté & cosmétique",
+    title: "Blinks Global Business x Mine Cosmetics",
+    challenge: "Contenu détaillé à enrichir.",
+    content: `Contenu détaillé à enrichir.`,
+    image: "/images/realisations/mine-cosmetics.jpg",
+    metrics: [],
   },
 ];
 
 export const TESTIMONIAL = {
-  quote:
-    "Blinks Global Business a radicalement transformé notre vision du digital. Leur expertise technique et stratégique est un atout majeur pour notre croissance internationale.",
-  author: "Directeur Innovation, GlobalBank",
-};
+  quote: "Blinks Global Business a converti une idée en web TV professionnelle et crédible; logo, site, réseaux sociaux, partenariats. De zéro à une présencedigitale complète, activée et performante.",
+  author: "Equipe Thiaré TV",
+}

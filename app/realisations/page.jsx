@@ -11,11 +11,13 @@ export const metadata = {
 };
 
 const TRUSTED_BY = [
-  { name: "Techno", logo: "/images/logos/techno.png" },
-  { name: "Luxury.co", logo: "/images/logos/luxuryco.png" },
-  { name: "GlobalBank", logo: "/images/logos/globalbank.png" },
-  { name: "Aerospace", logo: "/images/logos/aerospace.png" },
-  { name: "FutureHub", logo: "/images/logos/futurehub.png" },
+  { name: "Thiaré TV", logo: "/images/logos/thiare-tv.png" },
+  { name: "GS2M", logo: "/images/logos/g2sm.png" },
+  { name: "BAOBAB CARE", logo: "/images/logos/baobab.png" },
+  { name: "Mine Cosmetics", logo: "/images/logos/mine.png" },
+  { name: "Huma", logo: "/images/logos/huma.png" },
+  { name: "KUKY+++", logo: "/images/logos/kuky+++.png" },
+  { name: "ARCHIPROBAT", logo: "/images/logos/archiprobat.png" },
 ];
 
 export default function RealisationsPage() {
