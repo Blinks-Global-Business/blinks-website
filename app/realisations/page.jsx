@@ -27,8 +27,7 @@ export default function RealisationsPage() {
         <div className="max-w-3xl mx-auto px-6 py-16 text-center">
           <h1 className="font-heading font-bold text-3xl md:text-4xl text-text mb-4">Nos réalisations</h1>
           <p className="font-body text-text-muted">
-            Découvrez comment nous accompagnons nos partenaires dans leur succès numérique à travers des
-            résultats concrets et mesurables.
+            Des idées transformées en résultats mesurables : découvrez les projets que nous avons menés de A à Z, au Bénin, au Sénégal et en France.
           </p>
         </div>
       </section>

@@ -9,17 +9,12 @@ export default function ServiceCard({ service, Icon }) {
           <Icon className="text-primary" size={22} />
         </div>
       )}
-      <h3 className="font-heading font-semibold text-lg text-text mb-3">
-        {service.name}
-      </h3>
+      <h3 className="font-heading font-semibold text-lg text-text mb-3">{service.name}</h3>
+
+      <p className="font-accent italic text-text mb-4 leading-snug">{service.probleme}</p>
 
       <p className="font-body text-xs uppercase tracking-wide text-text-muted font-medium mb-1">
-        Le problème
-      </p>
-      <p className="font-body text-sm text-text-muted mb-3">{service.probleme}</p>
-
-      <p className="font-body text-xs uppercase tracking-wide text-text-muted font-medium mb-1">
-        Notre solution
+        La solution Blinks Global Business
       </p>
       <p className="font-body text-sm text-text mb-4">{service.solution}</p>
 

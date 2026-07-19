@@ -70,7 +70,9 @@ export default function Footer() {
           <h4 className="font-heading font-semibold text-sm mb-4">Contact</h4>
           <ul className="space-y-2.5 font-body text-sm text-white/70">
             <li>{SITE.email}</li>
-            <li>{SITE.phone2}</li>
+            <li className="flex items-center gap-2">🇫🇷 {SITE.phone2}</li>
+            <li className="flex items-center gap-2">🇧🇯 {SITE.phone1}</li>
+            <li className="flex items-center gap-2">🇸🇳 {SITE.phone3}</li>
             <li>{SITE.address}</li>
             <li>{SITE.hours}</li>
           </ul>

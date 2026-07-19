@@ -15,11 +15,11 @@ export const CASE_STUDIES = [
     challenge: "Une web TV communautaire sénégalaise à lancer de zéro : aucune identité de marque, aucune présence digitale existante.",
     content: `Blinks Global Business a accompagné Thiaré TV de la conception à la mise en ligne : création de logo, identité visuelle, charte graphique, étude de marché, stratégie d'entreprise et site internet.
 
-De zéro à une présence digitale complète, activée et performante — logo, site, réseaux sociaux et partenariats déployés.`,
+De zéro à une présence digitale complète, activée et performante : logo, site, réseaux sociaux et partenariats déployés.`,
     image: "/images/realisations/thiare-tv.jpg",
     metrics: [
-      { value: "0 → 1", label: "Présence digitale créée" },
-      { value: "Site + Réseaux", label: "Écosystème lancé" },
+      { value: "0 → 1", label: " 100 leads qualifiés / mois " },
+      { value: "Site + Réseaux", label: "Écosystème complet lancé en 3 semaines" },
       { value: "Partenariats", label: "Activés" },
     ],
   },
@@ -52,7 +52,7 @@ Le chiffre d'affaires de la parapharmacie a scalé grâce à cette digitalisatio
     metrics: [
       { value: "24h/24", label: "WhatsApp Business actif" },
       { value: "Click & Collect", label: "Opérationnel" },
-      { value: "CA", label: "En croissance" },
+      { value: "CA", label: " +12% de commandes via WhatsApp" },
     ],
   },
   {
@@ -61,11 +61,11 @@ Le chiffre d'affaires de la parapharmacie a scalé grâce à cette digitalisatio
     sector: "Éducation",
     title: "Stratégie de lancement pour GS2M",
     challenge: "Un groupe scolaire sénégalais de plus de 1000 élèves ayant besoin d'une stratégie à long terme pour structurer sa vision et accélérer son développement.",
-    content: `Blinks Global Business a activé une stratégie à long terme pour l'établissement — pas une simple prestation ponctuelle, mais un véritable accompagnement qui structure la vision de l'école et accélère son lancement prévu en octobre 2026.`,
+    content: `Blinks Global Business a activé une stratégie à long terme pour l'établissement, pas une simple prestation ponctuelle, mais un véritable accompagnement qui structure la vision de l'école et accélère son lancement prévu en octobre 2026.`,
     image: "/images/realisations/gs2m.jpg",
     metrics: [
       { value: "1000+", label: "Élèves" },
-      { value: "Oct. 2026", label: "Lancement accéléré" },
+      { value: "Oct. 2026", label: "Lancement prévu oct. 2026" },
       { value: "Stratégie", label: "Long terme activée" },
     ],
   },

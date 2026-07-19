@@ -20,12 +20,15 @@ export default function AccompagnementCard({ accompagnement }) {
       <p className="font-body text-sm text-text-muted mb-5">{accompagnement.tagline}</p>
 
       <span className="font-body text-sm text-text-muted line-through mr-2">
-        {accompagnement.priceOriginal} F
+        {accompagnement.priceOriginal} FCFA
       </span>
       <div className="flex items-baseline gap-1 mb-1">
         <span className="font-heading font-bold text-3xl text-primary">{accompagnement.price}</span>
         <span className="font-body text-sm text-text-muted">FCFA{accompagnement.period}</span>
       </div>
+      <p className="font-body text-xs text-text-muted mb-6">
+        {accompagnement.equivalent}
+      </p>
       <p className="font-body text-xs text-text-muted mb-6">{accompagnement.engagement}</p>
 
       <p className="font-body text-xs uppercase tracking-wide text-text-muted font-semibold mb-3">

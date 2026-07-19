@@ -15,7 +15,7 @@ const fraunces = Fraunces({ subsets: ["latin"], weight: ["400"], style: ["italic
 
 export const metadata = {
   title: "Blinks Global Business - Conseil, Croissance, Excellence",
-  description: "Cabinet international de conseil en transformation digitale.",
+  description: "Agence de transformation digitale au Bénin, au Sénégal et en France : création de site web, IA, branding et croissance commerciale pour PME. Résultats mesurables.",
 };
 
 export default function RootLayout({ children }) {

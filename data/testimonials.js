@@ -1,7 +1,7 @@
 export const TESTIMONIALS = [
   {
     quote:
-      "Blinks Global Business a converti une idée en web TV professionnelle et crédible; logo, site, réseaux sociaux, partenariats. De zéro à une présencedigitale complète, activée et performante.",
+      " Blinks Global Business a converti une idée en web TV professionnelle et crédible : logo, site, réseaux sociaux, partenariats. De zéro à une présence digitale complète, activée et performante.",
     author: "Equipe Thiaré TV",
   },
   {

@@ -17,10 +17,10 @@ import { FAQ_ITEMS } from "@/data/faq";
 import { CATEGORY_ICONS } from "@/lib/serviceIcons";
 
 const KPIS = [
-  { label: "Clients accompagnés", value: "10+" },
+  { label: "pays d'implantation (Bénin, France, Sénégal)", value: "3" },
   { label: "Projets livrés", value: "25+" },
-  { label: "Années d'expertise", value: "10" },
-  { label: "Taux de satisfaction", value: "98%" },
+  { label: "ans d'expertise cumulée de nos consultants", value: "10" },
+  { label: "secteurs d'activité", value: "7" },
 ];
 const KPIS_LOOP = [...KPIS, ...KPIS];
 
@@ -33,7 +33,7 @@ const WHY_US = [
 const CASE_STUDIES_PREVIEW = [
   { sector: "MEDIA", title: "De l'idée à la concrétisation : Thiaré TV", metrics: [ { value: "0 → 1", label: "Présence digitale créée" }, { value: "Site + Réseaux", label: "Écosystème lancé" }, { value: "Partenariats", label: "Activés" }, ], image: "/images/realisations/healthconnect.jpg" },
   { sector: "ASSOCIATION", title: "Identité de marque pour Baobab Care", metrics: [ { value: "Visuels", label: "Impact renforcé" }, { value: "Dons", label: "Campagnes optimisées" }, { value: "Marque", label: "À impact social" }, ], image: "/images/realisations/innovatech.jpg" },
-  { sector: "Éducation", title: "Stratégie de lancement pour GS2M", metrics: [ { value: "1000+", label: "Élèves" }, { value: "Oct. 2026", label: "Lancement accéléré" }, { value: "Stratégie", label: "Long terme activée" }, ], image: "/images/realisations/datagov.jpg" },
+  { sector: "EDUCATION", title: "Stratégie de lancement pour GS2M", metrics: [ { value: "1000+", label: "Élèves" }, { value: "Oct. 2026", label: "Lancement accéléré" }, { value: "Stratégie", label: "Long terme activée" }, ], image: "/images/realisations/datagov.jpg" },
 ];
 
 const TRUSTED_BY = [
@@ -57,7 +57,7 @@ export default function HomePage() {
             Propulsez votre <span className="text-primary">transformation digitale</span>
           </h1>
           <p className="font-body text-text-muted text-lg mb-8 max-w-md">
-            Accompagnement expert pour digitaliser vos process, augmenter votre chiffre d'affaire booster votre visibilité.
+            Transformez votre entreprise en machine de croissance digitale. Stratégie, exécution, résultats mesurables.
           </p>
           <div className="flex flex-wrap gap-4">
             <ModalButton type="rdv" variant="primary">Prendre rendez-vous</ModalButton>
@@ -91,13 +91,17 @@ export default function HomePage() {
       {/* NOTRE MISSION */}
       <section className="border-t-4 border-primary">
         <div className="max-w-3xl mx-auto px-6 py-20 text-center">
-          <p className="font-body text-xs uppercase tracking-widest text-primary font-semibold mb-4">Notre mission</p>
+          <p className="font-body text-xs uppercase tracking-widest text-primary font-semibold mb-4">
+            Notre mission
+          </p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-text mb-6 leading-tight">
-            Faire de la transformation digitale un accélérateur de croissance, pas une contrainte
+            Derrière chaque projet, une équipe qui vous écoute vraiment
           </h2>
           <p className="font-body text-text-muted leading-relaxed">
-            Chez Blinks Global Business, nous ne conseillons pas depuis l'extérieur : nous co-construisons avec vous. 
-            En alliant vision stratégique et excellence technique, nous transformons vos défis les plus complexes en résultats mesurables
+            Chez Blinks Global Business, on ne débarque pas avec des solutions toutes faites.
+            On prend le temps de comprendre votre réalité, vos contraintes, vos ambitions
+            puis on avance à vos côtés, avec des solutions pensées pour vous. Parce qu'une
+            bonne transformation digitale commence toujours par une vraie relation de confiance.
           </p>
         </div>
       </section>
@@ -166,6 +170,9 @@ export default function HomePage() {
           <p className="font-heading font-bold text-2xl text-primary mb-1">
             {a.price} <span className="text-sm font-body text-text-muted">FCFA{a.period}</span>
           </p>
+          <p className="font-body text-xs text-text-muted mb-6">
+            {a.equivalent}
+          </p>
           <p className="font-body text-xs text-text-muted">{a.engagement}</p>
         </div>
       ))}
@@ -173,7 +180,7 @@ export default function HomePage() {
 
     <div className="text-center mt-10">
       <Link
-        href="/services#tarifs"
+        href="/offres#tarifs"
         className="font-body text-sm text-primary font-medium inline-flex items-center gap-1 hover:gap-2 transition-all"
       >
         Voir tous les détails et tarifs <ArrowRight size={16} />
@@ -280,7 +287,7 @@ export default function HomePage() {
           <div className="bg-primary rounded-3xl px-8 py-16 text-center">
             <h2 className="font-heading font-bold text-2xl md:text-3xl text-white mb-4">Prêt à franchir le cap du digital ?</h2>
             <p className="font-body text-white/70 max-w-lg mx-auto mb-8">
-              Échangeons sur les leviers qui feront de l'excellence technologique votre moteur de croissance.
+              Réservez un appel gratuit de 30 minutes : repartez avec un diagnostic concret de votre potentiel digital.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <ModalButton type="rdv" variant="primary">Prendre rendez-vous</ModalButton>
