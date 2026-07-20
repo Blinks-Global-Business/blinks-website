@@ -35,7 +35,6 @@ export default function Header() {
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform" />
                 </button>
 
-                {/* Bande déroulante au survol */}
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
                   <div className="bg-white border border-border rounded-xl shadow-xl p-2 w-72 flex flex-col gap-1">
                     {link.children.map((child) => (
@@ -63,6 +62,7 @@ export default function Header() {
           )}
         </nav>
 
+        {/* CTA desktop */}
         <button
           onClick={() => openModal("rdv")}
           className="hidden md:block bg-accent text-primary-dark font-body font-medium text-sm px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"
@@ -70,14 +70,21 @@ export default function Header() {
           Prendre rendez-vous
         </button>
 
-        <div className="md:hidden flex items-center gap-3">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-primary" aria-label="Menu">
+       {/* Burger — mobile */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-primary"
+            aria-label="Menu"
+          >
             {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
 
-      {/* Menu mobile — alternative au hover : sous-liens toujours visibles, indentés */}
+      {/* Menu mobile */}
+
+      {/* Menu mobile */}
       {isOpen && (
         <nav className="md:hidden bg-bg border-t border-border px-6 py-6 flex flex-col gap-1">
           {NAV_LINKS.map((link) =>

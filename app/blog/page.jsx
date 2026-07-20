@@ -29,7 +29,6 @@ export default function BlogPage() {
       </section>
 
       {/* NEWSLETTER */}
-      {/* NEWSLETTER */}
 <section className="bg-primary/5 border-t border-border">
   <div className="max-w-7xl mx-auto px-6 py-16">
     <div className="bg-white rounded-2xl border border-border shadow-md p-10 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
