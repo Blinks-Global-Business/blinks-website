@@ -49,12 +49,12 @@ export default function HomePage() {
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p className="font-accent italic text-primary text-lg mb-4">Conseil. Croissance. Excellence.</p>
+          <p className="font-accent italic text-primary text-lg mb-4">Cabinet de conseil en transformation digitale</p>
           <h1 className="font-heading font-bold text-4xl md:text-5xl text-text leading-tight mb-6">
-            Propulsez votre <span className="text-primary">transformation digitale</span>
+            Plus de clients. Plus de visibilité. <span className="text-primary">Plus de résultats.</span>
           </h1>
           <p className="font-body text-text-muted text-lg mb-8 max-w-md">
-            Transformez votre entreprise en machine de croissance digitale. Stratégie, exécution, résultats mesurables.
+            Blinks Global Business accompagne les entreprises africaines et internationales dans leur transformation digitale, l'intégration de l'IA et leur développement commercial.
           </p>
           <div className="flex flex-wrap gap-4">
             <ModalButton type="rdv" variant="primary">Prendre rendez-vous</ModalButton>

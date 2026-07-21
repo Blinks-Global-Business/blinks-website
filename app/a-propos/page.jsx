@@ -45,11 +45,15 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="relative">
-          <div className="absolute -top-5 -left-5 w-full h-full bg-border rounded-xl -z-10" />
-          <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl bg-white flex items-center justify-center">
-            <span className="font-body text-sm text-text-muted">Image à intégrer</span>
-          </div>
-        </div>
+  <div className="absolute -top-5 -left-5 w-full h-full bg-border rounded-xl -z-10" />
+  <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+    <img
+      src="/images/about/notre-histoire.jpg"
+      alt="L'histoire de Blinks Global Business"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
       </section>
 
       <section className="bg-primary/5 border-y border-border">
