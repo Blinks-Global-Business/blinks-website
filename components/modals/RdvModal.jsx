@@ -67,7 +67,7 @@ export default function RdvModal() {
       </h2>
       <p className="font-body text-sm text-text-muted mb-6">
         Sélectionnez une date et un créneau pour discuter de votre projet
-        (45 minutes, visioconférence Google Meet).
+        (30 minutes, visioconférence Google Meet).
       </p>
 
       <div className="grid sm:grid-cols-2 gap-6 mb-6">

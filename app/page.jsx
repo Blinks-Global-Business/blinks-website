@@ -92,11 +92,11 @@ export default function HomePage() {
             Notre mission
           </p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-text mb-6 leading-tight">
-            Prouver que la transformation digitale change tout
+            Votre croissance, augmentée par l'intelligence
           </h2>
           <p className="font-body text-text-muted leading-relaxed">
-            On est nés d'une conviction simple : la transformation digitale n'est pas une dépense, c'est le levier de croissance le plus puissant qu'une entreprise puisse activer aujourd'hui. 
-            Chez Blinks Global Business, on existe pour le prouver, projet après projet, résultat après résultat.
+            Accélérer la croissance de nos partenaires en intégrant l'intelligence humaine 
+            et digitale au cœur de leurs processus décisionnels.
           </p>
         </div>
       </section>

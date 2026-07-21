@@ -29,10 +29,18 @@ export default function DatePicker({ selectedDate, onSelect }) {
   const goToPrevMonth = () => setViewDate(new Date(year, month - 1, 1));
   const goToNextMonth = () => setViewDate(new Date(year, month + 1, 1));
 
+  const isWeekend = (day) => {
+    const date = new Date(year, month, day);
+    const dow = date.getDay(); // 0 = Dimanche, 6 = Samedi
+    return dow === 0 || dow === 6;
+  };
+
   const isPast = (day) => {
     const date = new Date(year, month, day);
     return date < today;
   };
+
+  const isDisabled = (day) => isPast(day) || isWeekend(day);
 
   const isSelected = (day) => {
     if (!selectedDate) return false;
@@ -69,7 +77,12 @@ export default function DatePicker({ selectedDate, onSelect }) {
 
       <div className="grid grid-cols-7 gap-1 mb-2">
         {DAYS_FR.map((d, i) => (
-          <span key={i} className="font-body text-[10px] text-text-muted text-center uppercase">
+          <span
+            key={i}
+            className={`font-body text-[10px] text-center uppercase ${
+              i >= 5 ? "text-text-muted/40" : "text-text-muted"
+            }`}
+          >
             {d}
           </span>
         ))}
@@ -78,7 +91,8 @@ export default function DatePicker({ selectedDate, onSelect }) {
       <div className="grid grid-cols-7 gap-1">
         {days.map((day, i) => {
           if (!day) return <div key={i} />;
-          const disabled = isPast(day);
+          const disabled = isDisabled(day);
+          const weekend = isWeekend(day);
           const selected = isSelected(day);
           return (
             <button
@@ -86,11 +100,12 @@ export default function DatePicker({ selectedDate, onSelect }) {
               type="button"
               disabled={disabled}
               onClick={() => onSelect(new Date(year, month, day))}
+              title={weekend ? "Fermé le week-end" : undefined}
               className={`w-8 h-8 rounded-md font-body text-sm transition-colors ${
                 selected
                   ? "bg-primary text-white font-medium"
                   : disabled
-                  ? "text-text-muted/30 cursor-not-allowed"
+                  ? "text-text-muted/25 cursor-not-allowed"
                   : "text-text hover:bg-primary/10"
               }`}
             >
