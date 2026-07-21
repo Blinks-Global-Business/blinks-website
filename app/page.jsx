@@ -95,8 +95,8 @@ export default function HomePage() {
             Votre croissance, augmentée par l'intelligence
           </h2>
           <p className="font-body text-text-muted leading-relaxed">
-            Accélérer la croissance de nos partenaires en intégrant l'intelligence humaine 
-            et digitale au cœur de leurs processus décisionnels.
+            Accompagner les organisations africaines dans leur transformation digitale grâce à l'innovation, 
+            à l'intelligence artificielle et à des stratégies performantes pour accélérer leur croissance et leur compétitivité.
           </p>
         </div>
       </section>

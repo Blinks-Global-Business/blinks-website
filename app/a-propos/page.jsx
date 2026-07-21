@@ -62,16 +62,16 @@ export default function AboutPage() {
             <Rocket className="text-primary mb-4" size={26} />
             <h3 className="font-heading font-semibold text-xl text-text mb-2">Notre mission</h3>
             <p className="font-body text-sm text-text-muted leading-relaxed">
-              Accélérer la croissance de nos partenaires en intégrant l'intelligence humaine et digitale au
-              cœur de leurs processus décisionnels.
+              Accompagner les organisations africaines dans leur transformation digitale grâce à l'innovation, 
+              à l'intelligence artificielle et à des stratégies performantes pour accélérer leur croissance et leur compétitivité.
             </p>
           </div>
           <div className="bg-white rounded-xl border-l-4 border-accent p-8">
             <Eye className="text-accent mb-4" size={26} />
             <h3 className="font-heading font-semibold text-xl text-text mb-2">Notre vision</h3>
             <p className="font-body text-sm text-text-muted leading-relaxed">
-              Devenir la référence mondiale de l'accompagnement hybride, où stratégie de haut niveau et
-              excellence d'exécution technologique ne font qu'un.
+              Devenir le cabinet de conseil de référence en transformation digitale des organisations africaines, 
+              leader en innovation, intelligence artificielle et perfomance économique.
             </p>
           </div>
         </div>
