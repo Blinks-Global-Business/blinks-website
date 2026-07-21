@@ -252,8 +252,7 @@ export default function HomePage() {
         ))}
       </div>
 
-      <Link
-        href="/realisations"
+      <Link href={`/realisations/${study.id}`}
         className="font-body text-sm text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all"
       >
         Voir l'étude de cas <ArrowRight size={14} />
