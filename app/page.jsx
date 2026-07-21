@@ -92,7 +92,7 @@ export default function HomePage() {
             Notre mission
           </p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-text mb-6 leading-tight">
-            Votre croissance, augmentée par l'intelligence
+            Votre croissance, augmentée par l'intelligence artificielle
           </h2>
           <p className="font-body text-text-muted leading-relaxed">
             Accompagner les organisations africaines dans leur transformation digitale grâce à l'innovation, 

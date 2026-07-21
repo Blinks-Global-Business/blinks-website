@@ -5,18 +5,18 @@ export const SERVICE_CATEGORIES = [
     image: "/images/services/marketing-croissance-commerciale.jpg",
     services: [
       {
-        id: "community-management-contenu",
-        name: "Community management & création de contenu",
+        id: "community-management",
+        name: "Community management",
         probleme: "Une présence sur les réseaux sociaux irrégulière qui ne génère pas d'engagement ?",
         solution: "Publications régulières, vidéos courtes et gestion de communauté alignées sur un calendrier éditorial mensuel validé avec vous.",
         benefices: ["Présence professionnelle dès le 1er mois", "Communauté engagée", "Calendrier éditorial maîtrisé"],
       },
       {
-        id: "email-marketing-newsletters",
-        name: "Email marketing & newsletters",
-        probleme: "Une base clients qui ne reçoit aucune communication régulière et se refroidit avec le temps ?",
-        solution: "Séquences email de conversion et newsletters mensuelles adressées directement à votre base clients.",
-        benefices: ["Fidélisation renforcée", "Conversion par email mesurable", "Relation client entretenue"],
+        id: "strategie-marketing-digital",
+        name: "Stratégie marketing digital",
+        probleme: "Vous multipliez les actions marketing, mais sans vision d'ensemble ni vraie stratégie derrière ?",
+        solution: "Définition d'une stratégie marketing digitale claire et priorisée, alignée sur vos objectifs de croissance.",
+        benefices: ["Actions marketing cohérentes", "Priorités clarifiées", "Objectifs de croissance alignés"],
       },
       {
         id: "seo-visibilite-locale",
@@ -90,7 +90,7 @@ export const SERVICE_CATEGORIES = [
       },
       {
         id: "objets-signaletique",
-        name: "Objets publicitaires & signalétique",
+        name: "Objets publicitaires & signalétiques",
         probleme: "Un manque de visibilité physique lors d'événements ou sur vos points de vente ?",
         solution: "Goodies, objets publicitaires et signalétique conçus pour renforcer votre présence terrain.",
         benefices: ["Visibilité terrain accrue", "Expérience de marque mémorable", "Présence événementielle renforcée"],

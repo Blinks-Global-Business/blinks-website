@@ -17,9 +17,9 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image src="/logo/blinks-logo.png" alt="Blinks Global Business" width={38} height={38} />
           <span className="font-heading font-bold text-sm leading-tight text-primary">
-            Blinks
+            Blinks 
             <br />
-            <span className="font-body font-medium text-[10px] tracking-wide text-text-muted">
+            <span className="font-body font-medium text-[10px] tracking-wide text-primary">
               GLOBAL BUSINESS
             </span>
           </span>
