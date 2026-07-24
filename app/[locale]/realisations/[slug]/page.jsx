@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { getTranslations, getLocale } from "next-intl/server";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import CaseStudyImage from "@/components/sections/CaseStudyImage";
@@ -12,20 +13,23 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const study = CASE_STUDIES.find((s) => s.id === slug);
+  const locale = await getLocale();
   if (!study) return { title: "Étude de cas introuvable - Blinks Global Business" };
   return {
-    title: `${study.title} - Réalisations Blinks Global Business`,
-    description: study.challenge,
+    title: `${study.title[locale]} - Réalisations Blinks Global Business`,
+    description: study.challenge[locale],
   };
 }
 
 export default async function CaseStudyPage({ params }) {
   const { slug } = await params;
   const study = CASE_STUDIES.find((s) => s.id === slug);
+  const locale = await getLocale();
+  const t = await getTranslations("realisations");
 
   if (!study) notFound();
 
-  const categoryLabel = CASE_STUDY_FILTERS.find((c) => c.id === study.category)?.label;
+  const categoryLabel = CASE_STUDY_FILTERS.find((c) => c.id === study.category)?.label[locale];
 
   const related = CASE_STUDIES.filter(
     (s) => s.category === study.category && s.id !== study.id
@@ -39,18 +43,18 @@ export default async function CaseStudyPage({ params }) {
             href="/realisations"
             className="inline-flex items-center gap-2 font-body text-sm text-primary mb-8 ml-1 hover:gap-3 transition-all"
           >
-            <ArrowLeft size={16} /> Retour aux réalisations
+            <ArrowLeft size={16} /> {t("backToList")}
           </Link>
 
           <div className="flex items-center gap-3 mb-4">
             <span className="inline-block bg-primary/10 text-primary text-[11px] font-body font-medium uppercase tracking-wide px-2.5 py-1 rounded">
-              {study.sector}
+              {study.sector[locale]}
             </span>
             <span className="font-body text-xs text-text-muted">{categoryLabel}</span>
           </div>
 
           <h1 className="font-heading font-bold text-3xl md:text-4xl text-text leading-tight">
-            {study.title}
+            {study.title[locale]}
           </h1>
         </div>
       </section>
@@ -58,46 +62,47 @@ export default async function CaseStudyPage({ params }) {
       <div className="max-w-5xl mx-auto px-6 -mt-8">
         <CaseStudyImage
           src={study.image}
-          alt={study.title}
+          alt={study.title[locale]}
           className="w-full h-64 md:h-96 rounded-xl shadow-lg"
         />
       </div>
 
       <section className="max-w-3xl mx-auto px-6 py-14">
-        {/* Métriques clés en évidence */}
         <div className="flex flex-wrap gap-4 mb-10">
-          {study.metrics.map((m) => (
-            <div key={m.label} className="bg-primary/5 border border-border rounded-lg px-5 py-3 text-center">
-              <p className="font-heading font-bold text-xl text-emerald">{m.value}</p>
-              <p className="font-body text-xs text-text-muted">{m.label}</p>
-            </div>
-          ))}
+          {study.metrics.map((m, i) => {
+            const value = typeof m.value === "object" ? m.value[locale] : m.value;
+            const label = typeof m.label === "object" ? m.label[locale] : m.label;
+            return (
+              <div key={i} className="bg-primary/5 border border-border rounded-lg px-5 py-3 text-center">
+                <p className="font-heading font-bold text-xl text-emerald">{value}</p>
+                <p className="font-body text-xs text-text-muted">{label}</p>
+              </div>
+            );
+          })}
         </div>
 
         <div className="font-body text-text leading-relaxed whitespace-pre-line">
-          {study.content}
+          {study.content[locale]}
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-primary/5 border-y border-border">
         <div className="max-w-3xl mx-auto px-6 py-14 text-center">
           <h2 className="font-heading font-bold text-xl md:text-2xl text-text mb-6">
-            Un projet similaire en tête ?
+            {t("similarProjectCta.title")}
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <ModalButton type="devis" variant="primary">Démarrer mon projet</ModalButton>
-            <ModalButton type="rdv" variant="outline">Prendre rendez-vous</ModalButton>
+            <ModalButton type="devis" variant="primary">{t("similarProjectCta.quoteButton")}</ModalButton>
+            <ModalButton type="rdv" variant="outline">{t("similarProjectCta.rdvButton")}</ModalButton>
           </div>
         </div>
       </section>
 
-      {/* Études liées */}
       {related.length > 0 && (
         <section>
           <div className="max-w-7xl mx-auto px-6 py-16">
             <h2 className="font-heading font-bold text-xl md:text-2xl text-text mb-8">
-              Réalisations similaires
+              {t("similarProjects")}
             </h2>
             <div className="grid sm:grid-cols-2 gap-6">
               {related.map((r) => (
@@ -106,10 +111,10 @@ export default async function CaseStudyPage({ params }) {
                   href={`/realisations/${r.id}`}
                   className="bg-white border border-border rounded-xl overflow-hidden hover:border-primary transition-colors"
                 >
-                  <CaseStudyImage src={r.image} alt={r.title} className="w-full h-40" />
+                  <CaseStudyImage src={r.image} alt={r.title[locale]} className="w-full h-40" />
                   <div className="p-5">
-                    <h3 className="font-heading font-semibold text-sm text-text mb-1">{r.title}</h3>
-                    <p className="font-body text-xs text-text-muted">{r.sector}</p>
+                    <h3 className="font-heading font-semibold text-sm text-text mb-1">{r.title[locale]}</h3>
+                    <p className="font-body text-xs text-text-muted">{r.sector[locale]}</p>
                   </div>
                 </Link>
               ))}

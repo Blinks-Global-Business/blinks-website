@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Card from "@/components/ui/Card";
@@ -9,8 +10,9 @@ import { CASE_STUDY_FILTERS } from "@/data/caseStudies";
 
 export default function CaseStudiesGrid({ studies }) {
   const [activeFilter, setActiveFilter] = useState("tous");
+  const locale = useLocale();
+  const t = useTranslations("realisations");
 
-  // N'affiche que les filtres pour lesquels il existe au moins une étude de cas
   const availableFilters = useMemo(() => {
     const usedCategories = new Set(studies.map((s) => s.category));
     return CASE_STUDY_FILTERS.filter((f) => f.id === "tous" || usedCategories.has(f.id));
@@ -34,44 +36,46 @@ export default function CaseStudiesGrid({ studies }) {
                   : "border border-border text-text hover:border-primary hover:text-primary"
               }`}
             >
-              {filter.label}
+              {filter.label[locale]}
             </button>
           );
         })}
       </div>
 
       {filtered.length === 0 ? (
-        <p className="text-center font-body text-sm text-text-muted py-10">
-          Aucune étude de cas disponible dans cette catégorie pour le moment.
-        </p>
+        <p className="text-center font-body text-sm text-text-muted py-10">{t("noResults")}</p>
       ) : (
         <div className="grid sm:grid-cols-2 gap-6">
           {filtered.map((study) => (
             <Card key={study.id} className="!p-0 overflow-hidden">
               <div className="w-full aspect-video">
-                <CaseStudyImage src={study.image} alt={study.title} />
+                <CaseStudyImage src={study.image} alt={study.title[locale]} />
               </div>
               <div className="p-6">
                 <span className="inline-block bg-primary/10 text-primary text-[11px] font-body font-medium uppercase tracking-wide px-2.5 py-1 rounded mb-3">
-                  {study.sector}
+                  {study.sector[locale]}
                 </span>
-                <h3 className="font-heading font-semibold text-lg text-text mb-2">{study.title}</h3>
-                <p className="font-body text-sm text-text-muted mb-4">{study.challenge}</p>
+                <h3 className="font-heading font-semibold text-lg text-text mb-2">{study.title[locale]}</h3>
+                <p className="font-body text-sm text-text-muted mb-4">{study.challenge[locale]}</p>
 
                 <div className="flex flex-wrap gap-4 mb-4">
-                  {study.metrics.map((m) => (
-                    <div key={m.label} className="bg-bg border border-border rounded-lg px-3 py-2">
-                      <p className="font-heading font-bold text-sm text-emerald">{m.value}</p>
-                      <p className="font-body text-[11px] text-text-muted">{m.label}</p>
-                    </div>
-                  ))}
+                  {study.metrics.map((m, i) => {
+                    const value = typeof m.value === "object" ? m.value[locale] : m.value;
+                    const label = typeof m.label === "object" ? m.label[locale] : m.label;
+                    return (
+                      <div key={i} className="bg-bg border border-border rounded-lg px-3 py-2">
+                        <p className="font-heading font-bold text-sm text-emerald">{value}</p>
+                        <p className="font-body text-[11px] text-text-muted">{label}</p>
+                      </div>
+                    );
+                  })}
                 </div>
 
                 <Link
                   href={`/realisations/${study.id}`}
                   className="font-body text-sm text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all"
                 >
-                  Voir l'étude de cas <ArrowRight size={14} />
+                  {t("viewCaseStudy")} <ArrowRight size={14} />
                 </Link>
               </div>
             </Card>

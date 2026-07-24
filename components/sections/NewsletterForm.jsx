@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 
 export default function NewsletterForm() {
+  const t = useTranslations("newsletter");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle");
 
@@ -27,7 +29,7 @@ export default function NewsletterForm() {
   if (status === "success") {
     return (
       <p className="flex items-center gap-2 font-body text-sm text-emerald">
-        <CheckCircle2 size={18} /> Merci ! Vous êtes inscrit à la newsletter.
+        <CheckCircle2 size={18} /> {t("success")}
       </p>
     );
   }
@@ -37,7 +39,7 @@ export default function NewsletterForm() {
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row w-full md:w-auto gap-3">
         <input
           type="email"
-          placeholder="Votre adresse e-mail"
+          placeholder={t("placeholder")}
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -49,13 +51,13 @@ export default function NewsletterForm() {
           className="w-full sm:w-auto shrink-0 flex items-center justify-center gap-2 bg-accent text-primary-dark font-body font-medium text-sm px-6 py-2.5 rounded-md hover:opacity-90 disabled:opacity-50"
         >
           {status === "loading" && <Loader2 size={14} className="animate-spin" />}
-          {status === "loading" ? "..." : "S'abonner"}
+          {status === "loading" ? t("subscribing") : t("subscribe")}
         </button>
       </form>
 
       {status === "error" && (
         <p className="flex items-center gap-2 font-body text-xs text-red-600 mt-3">
-          <AlertCircle size={14} /> Une erreur est survenue. Réessayez dans quelques instants.
+          <AlertCircle size={14} /> {t("error")}
         </p>
       )}
     </div>

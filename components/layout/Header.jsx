@@ -2,14 +2,22 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { NAV_LINKS } from "@/lib/constants";
 import { useModal } from "@/components/providers/ModalProvider";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
+
+const CHILD_LABEL_KEYS = { expertise: "expertiseLabel", offers: "offersLabel" };
+const CHILD_DESC_KEYS = { expertise: "expertiseDesc", offers: "offersDesc" };
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { openModal } = useModal();
+  const t = useTranslations("nav");
+
+  const labelFor = (key) => (key === "services" ? t("servicesLabel") : t(key));
 
   return (
     <header className="sticky top-0 z-50 bg-bg/90 backdrop-blur border-b border-border">
@@ -17,7 +25,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image src="/logo/blinks-logo.png" alt="Blinks Global Business" width={38} height={38} />
           <span className="font-heading font-bold text-sm leading-tight text-primary">
-            Blinks 
+            Blinks
             <br />
             <span className="font-body font-medium text-[10px] tracking-wide text-primary">
               GLOBAL BUSINESS
@@ -29,9 +37,9 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) =>
             link.children ? (
-              <div key={link.label} className="relative group">
+              <div key={link.key} className="relative group">
                 <button className="flex items-center gap-1 font-body text-sm text-text hover:text-primary transition-colors py-2">
-                  {link.label}
+                  {labelFor(link.key)}
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform" />
                 </button>
 
@@ -43,8 +51,12 @@ export default function Header() {
                         href={child.href}
                         className="block rounded-lg px-4 py-3 hover:bg-primary/5 transition-colors"
                       >
-                        <p className="font-heading font-semibold text-sm text-text">{child.label}</p>
-                        <p className="font-body text-xs text-text-muted mt-0.5">{child.description}</p>
+                        <p className="font-heading font-semibold text-sm text-text">
+                          {t(CHILD_LABEL_KEYS[child.key])}
+                        </p>
+                        <p className="font-body text-xs text-text-muted mt-0.5">
+                          {t(CHILD_DESC_KEYS[child.key])}
+                        </p>
                       </Link>
                     ))}
                   </div>
@@ -56,10 +68,12 @@ export default function Header() {
                 href={link.href}
                 className="font-body text-sm text-text hover:text-primary transition-colors"
               >
-                {link.label}
+                {labelFor(link.key)}
               </Link>
             )
           )}
+
+          <LanguageSwitcher />
         </nav>
 
         {/* CTA desktop */}
@@ -67,30 +81,25 @@ export default function Header() {
           onClick={() => openModal("rdv")}
           className="hidden md:block bg-accent text-primary-dark font-body font-medium text-sm px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"
         >
-          Prendre rendez-vous
+          {t("bookAppointment")}
         </button>
 
-       {/* Burger — mobile */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-primary"
-            aria-label="Menu"
-          >
+        {/* Burger + langue — mobile */}
+        <div className="md:hidden flex items-center gap-3">
+          <LanguageSwitcher compact />
+          <button onClick={() => setIsOpen(!isOpen)} className="text-primary" aria-label="Menu">
             {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
 
       {/* Menu mobile */}
-
-      {/* Menu mobile */}
       {isOpen && (
         <nav className="md:hidden bg-bg border-t border-border px-6 py-6 flex flex-col gap-1">
           {NAV_LINKS.map((link) =>
             link.children ? (
-              <div key={link.label} className="py-2">
-                <p className="font-body text-base text-text font-medium mb-2">{link.label}</p>
+              <div key={link.key} className="py-2">
+                <p className="font-body text-base text-text font-medium mb-2">{labelFor(link.key)}</p>
                 <div className="flex flex-col gap-1 pl-4 border-l-2 border-border">
                   {link.children.map((child) => (
                     <Link
@@ -99,8 +108,12 @@ export default function Header() {
                       onClick={() => setIsOpen(false)}
                       className="py-2"
                     >
-                      <p className="font-body text-sm text-primary font-medium">{child.label}</p>
-                      <p className="font-body text-xs text-text-muted">{child.description}</p>
+                      <p className="font-body text-sm text-primary font-medium">
+                        {t(CHILD_LABEL_KEYS[child.key])}
+                      </p>
+                      <p className="font-body text-xs text-text-muted">
+                        {t(CHILD_DESC_KEYS[child.key])}
+                      </p>
                     </Link>
                   ))}
                 </div>
@@ -112,7 +125,7 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
                 className="font-body text-base text-text py-3"
               >
-                {link.label}
+                {labelFor(link.key)}
               </Link>
             )
           )}
@@ -123,7 +136,7 @@ export default function Header() {
             }}
             className="bg-accent text-primary-dark font-body font-medium text-sm px-5 py-3 rounded-md mt-4"
           >
-            Prendre rendez-vous
+            {t("bookAppointment")}
           </button>
         </nav>
       )}

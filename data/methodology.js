@@ -4,25 +4,37 @@ export const METHODOLOGY_STEPS = [
   {
     icon: Search,
     letter: "D",
-    label: "Diagnostic",
-    description: "Nous auditons votre organisation et vos défis digitaux.",
+    label: { fr: "Diagnostic", en: "Diagnosis" },
+    description: {
+      fr: "Nous auditons votre organisation et vos défis digitaux.",
+      en: "We audit your organization and your digital challenges.",
+    },
   },
   {
     icon: LineChart,
     letter: "A",
-    label: "Analyse",
-    description: "Nous déployons la stratégie et les solutions sur-mesure",
+    label: { fr: "Analyse", en: "Analysis" },
+    description: {
+      fr: "Nous déployons la stratégie et les solutions sur-mesure",
+      en: "We deploy the strategy and custom solutions",
+    },
   },
   {
     icon: TrendingUp,
     letter: "R",
-    label: "Résultats",
-    description: "Nous mesurons, ajustons et maximisons la performance.",
+    label: { fr: "Résultats", en: "Results" },
+    description: {
+      fr: "Nous mesurons, ajustons et maximisons la performance.",
+      en: "We measure, adjust and maximize performance.",
+    },
   },
   {
     icon: Rocket,
     letter: "E",
-    label: "Expansion",
-    description: "Nous faisons évoluer vos solutions pour une croissance durable.",
+    label: { fr: "Expansion", en: "Expansion" },
+    description: {
+      fr: "Nous faisons évoluer vos solutions pour une croissance durable.",
+      en: "We evolve your solutions to support sustainable growth.",
+    },
   },
 ];

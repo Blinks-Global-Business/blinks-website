@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { FaLinkedinIn } from "react-icons/fa6";
 
 function MemberPhoto({ src, alt }) {
@@ -16,17 +17,13 @@ function MemberPhoto({ src, alt }) {
     );
   }
 
-  return (
-    <img
-      src={src}
-      alt={alt}
-      onError={() => setError(true)}
-      className="w-full h-full object-cover"
-    />
-  );
+  return <img src={src} alt={alt} onError={() => setError(true)} className="w-full h-full object-cover" />;
 }
 
 export default function TeamGrid({ members }) {
+  const locale = useLocale();
+  const t = useTranslations("about.team");
+
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
       {members.map((member) => (
@@ -35,14 +32,14 @@ export default function TeamGrid({ members }) {
             <MemberPhoto src={member.photo} alt={member.name} />
           </div>
           <h3 className="font-heading font-semibold text-sm text-text">{member.name}</h3>
-          <p className="font-body text-xs text-text-muted mt-0.5">{member.role}</p>
+          <p className="font-body text-xs text-text-muted mt-0.5">{member.role[locale]}</p>
           <a
             href={member.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-primary text-xs font-body mt-2 hover:underline"
           >
-            <FaLinkedinIn size={12} /> Connect
+            <FaLinkedinIn size={12} /> {t("connect")}
           </a>
         </div>
       ))}

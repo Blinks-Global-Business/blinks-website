@@ -1,38 +1,28 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 
-const INITIAL_STATE = {
-  name: "",
-  email: "",
-  phone: "",
-  company: "",
-  subject: "Demande de devis",
-  message: "",
-};
+const INITIAL_STATE = { name: "", email: "", phone: "", company: "", subject: "quote", message: "" };
 
 export default function ContactForm() {
+  const t = useTranslations("contact.form");
   const [formData, setFormData] = useState(INITIAL_STATE);
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [status, setStatus] = useState("idle");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("loading");
-
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, subject: t(`subjectOptions.${formData.subject}`) }),
       });
-
       if (!res.ok) throw new Error();
-
       setStatus("success");
       setFormData(INITIAL_STATE);
     } catch {
@@ -40,12 +30,14 @@ export default function ContactForm() {
     }
   };
 
+  const subjectKeys = ["quote", "appointment", "general", "support", "partnership"];
+
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
           <label className="font-body text-xs uppercase tracking-wide text-text-muted block mb-1">
-            Nom complet
+            {t("fullName")}
           </label>
           <input
             type="text"
@@ -58,7 +50,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label className="font-body text-xs uppercase tracking-wide text-text-muted block mb-1">
-            Email professionnel
+            {t("emailLabel")}
           </label>
           <input
             type="email"
@@ -74,7 +66,7 @@ export default function ContactForm() {
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
           <label className="font-body text-xs uppercase tracking-wide text-text-muted block mb-1">
-            Téléphone
+            {t("phone")}
           </label>
           <input
             type="tel"
@@ -86,7 +78,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label className="font-body text-xs uppercase tracking-wide text-text-muted block mb-1">
-            Entreprise
+            {t("company")}
           </label>
           <input
             type="text"
@@ -100,7 +92,7 @@ export default function ContactForm() {
 
       <div>
         <label className="font-body text-xs uppercase tracking-wide text-text-muted block mb-1">
-          Sujet
+          {t("subject")}
         </label>
         <select
           name="subject"
@@ -108,17 +100,15 @@ export default function ContactForm() {
           onChange={handleChange}
           className="w-full border border-border rounded-md px-4 py-2.5 font-body text-sm focus:border-primary outline-none bg-white"
         >
-          <option>Demande de devis</option>
-          <option>Prise de rendez-vous</option>
-          <option>Question générale</option>
-          <option>Support</option>
-          <option>Partenariat</option>
+          {subjectKeys.map((key) => (
+            <option key={key} value={key}>{t(`subjectOptions.${key}`)}</option>
+          ))}
         </select>
       </div>
 
       <div>
         <label className="font-body text-xs uppercase tracking-wide text-text-muted block mb-1">
-          Message
+          {t("message")}
         </label>
         <textarea
           name="message"
@@ -136,19 +126,19 @@ export default function ContactForm() {
         className="w-full flex items-center justify-center gap-2 bg-accent text-primary-dark font-body font-medium text-sm px-6 py-3 rounded-md hover:opacity-90 transition-opacity disabled:opacity-50"
       >
         {status === "loading" && <Loader2 size={16} className="animate-spin" />}
-        {status === "loading" ? "Envoi en cours..." : "Envoyer le message"}
+        {status === "loading" ? t("submitting") : t("submit")}
       </button>
-      <p> Réponse garantie sous 24h ouvrées.</p>
+      <p className="font-body text-xs text-text-muted text-center">{t("responseTime")}</p>
 
       {status === "success" && (
         <p className="flex items-center gap-2 font-body text-sm text-emerald">
-          <CheckCircle2 size={16} /> Message envoyé avec succès ! Nous revenons vers vous sous 24h.
+          <CheckCircle2 size={16} /> {t("success")}
         </p>
       )}
 
       {status === "error" && (
         <p className="flex items-center gap-2 font-body text-sm text-red-600">
-          <AlertCircle size={16} /> Une erreur est survenue. Réessayez ou contactez-nous directement par email.
+          <AlertCircle size={16} /> {t("error")}
         </p>
       )}
     </form>
