@@ -1,0 +1,389 @@
+{
+  "nav": {
+    "home": "Home",
+    "servicesLabel": "Services",
+    "expertiseLabel": "Our Expertise",
+    "expertiseDesc": "Our 4 areas of expertise and how we work",
+    "offersLabel": "Our Offers",
+    "offersDesc": "Diagnostic, support packages and pricing",
+    "realisations": "Our Work",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookAppointment": "Book an appointment"
+  },
+  "legal": {
+    "mentions": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies",
+    "terms": "Terms & Conditions"
+  },
+  "footer": {
+  "description": "International digital transformation consulting firm.",
+  "navigationTitle": "Navigation",
+  "legalTitle": "Legal",
+  "contactTitle": "Contact",
+  "hours": "Mon-Thu: 9am-6pm · Fri: 9am-12pm (GMT+1, Cotonou)",
+  "rights": "All rights reserved."
+  },
+  "common": {
+    "tagline": "Consulting. Growth. Excellence."
+  },
+  "home": {
+    "meta": {
+    "title": "Blinks Global Business - Consulting, Growth, Excellence",
+    "description": "Digital transformation agency in Benin, Senegal and France: website creation, AI, branding and business growth for SMEs."
+    },
+    "hero": {
+      "eyebrow": "Digital transformation consulting firm",
+      "titleLine1": "More clients. More visibility.",
+      "titleHighlight": "More results.",
+      "subtitle": "Blinks Global Business supports African and international companies in their digital transformation, AI integration, and business development.",
+      "requestQuote": "Request a quote"
+    },
+    "kpis": [
+      { "value": "3", "label": "countries of operation (Benin, France, Senegal)" },
+      { "value": "25+", "label": "Projects delivered" },
+      { "value": "10", "label": "years of combined consultant expertise" },
+      { "value": "7", "label": "industries served" }
+    ],
+    "mission": {
+      "eyebrow": "Our mission",
+      "title": "Your growth, powered by artificial intelligence",
+      "text": "Supporting African organizations in their digital transformation through innovation, artificial intelligence, and high-performing strategies to accelerate their growth and competitiveness."
+    },
+    "expertise": {
+      "title": "Our areas of expertise",
+      "subtitle": "Concrete solutions for every stage of your transformation.",
+      "viewAll": "View all our services",
+      "servicesAvailable": "{count} services available",
+      "learnMore": "Learn more"
+    },
+    "accompagnements": {
+      "title": "Our support packages",
+      "subtitle": "A fully-inclusive monthly package, no surprises. You choose the level, we deliver every month.",
+      "recommended": "★ RECOMMENDED",
+      "viewAllPricing": "See all details and pricing"
+    },
+    "whyUs": {
+      "title": "Why Blinks Global Business?",
+      "excellence": "Excellence",
+      "excellenceSubtitle": "Our everyday standard",
+      "award": { "title": "Certified expertise", "description": "Our consultants hold the most recognized certifications in the industry." },
+      "agility": { "title": "Execution agility", "description": "We deploy solutions faster thanks to our proven methodologies." },
+      "engagement": { "title": "Results commitment", "description": "Every engagement is driven by measurable objectives and real performance tracking." }
+    },
+    "caseStudies": {
+      "title": "Case studies",
+      "subtitle": "See how we turn our clients' challenges into concrete results.",
+      "viewCaseStudy": "View case study"
+    },
+    "trustedBy": "They trust us",
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Everything you need to know before getting started."
+    },
+    "finalCta": {
+      "title": "Ready to take the digital leap?",
+      "subtitle": "Book a free 30-minute call and walk away with a concrete assessment of your digital potential."
+    }
+  },
+  "services": {
+    "meta": {
+    "title": "Our Expertise - Blinks Global Business",
+    "description": "Discover our 4 areas of expertise and how we work for your digital transformation."
+    },
+    "title": "Our expertise",
+    "subtitle": "We bring together strategy, digital marketing, technology development and artificial intelligence under one roof: a single partner, a single vision.",
+    "viewOffers": "See our offers →",
+    "solutionLabel": "The Blinks Global Business solution",
+    "methodology": {
+      "title": "Our way of working: DARE",
+      "subtitle": "A proven 4-step approach to guarantee the success of your projects."
+    },
+    "finalCta": {
+      "title": "Ready to transform your business?",
+      "subtitle": "Discover our support packages and start with a free diagnostic.",
+      "button": "Discover our offers"
+    }
+  },
+  "offers": {
+    "meta": {
+    "title": "Our Offers & Pricing - Blinks Global Business",
+    "description": "Diagnostic, monthly support packages and on-demand services for your digital transformation."
+    },
+    "hero": {
+      "title": "Our offers & pricing",
+      "subtitle": "A clear commitment, a fixed price, zero surprises. Choose the support level that fits your situation."
+    },
+    "threeSteps": {
+      "title": "Our 3-step approach",
+      "diagnose": { "title": "Diagnose", "desc": "Understand your real situation before proposing anything." },
+      "deploy": { "title": "Deploy", "desc": "Deliver concrete solutions, with quantified deliverables and deadlines that are kept." },
+      "develop": { "title": "Grow", "desc": "Support your growth over time with measurable results." }
+    },
+    "diagnostic": {
+      "eyebrow": "Your entry point",
+      "bookButton": "Book my diagnostic"
+    },
+    "recommended": "★ RECOMMENDED",
+    "includedEachMonth": "Included every month",
+    "chooseButton": "Choose this package",
+    "accompagnements": {
+      "title": "Three packages. One ambition: your growth.",
+      "subtitle": "A fully-inclusive monthly package, no surprises."
+    },
+    "alaCarte": {
+      "eyebrow": "A specific need?",
+      "title": "On-demand services",
+      "subtitle": "You provide the brief. We deliver. A precise quote within 48h."
+    },
+    "bigAccounts": {
+      "eyebrow": "Large accounts",
+      "title": "Institutions & organizations",
+      "text": "Ministries, public agencies, international NGOs, large enterprises: your projects call for a dedicated response. Needs assessment and detailed proposal within 10 business days.",
+      "button": "Free initial consultation"
+    },
+    "whyBlinks": { "title": "Why Blinks Global Business?" },
+    "finalCta": {
+      "title": "Take action",
+      "subtitle": "Book your Strategic & Digital Diagnostic · 19,900 FCFA"
+    }
+  },
+  "realisations": {
+    "meta": {
+    "title": "Our Work - Blinks Global Business",
+    "description": "See how Blinks Global Business helps its partners achieve concrete, measurable results."
+    },
+    "noResults": "No case study available in this category yet.",
+    "viewCaseStudy": "View case study",
+    "testimonialLabel": "Testimonial",
+    "hero": {
+      "title": "Our Work",
+      "subtitle": "Ideas turned into measurable results: discover the projects we've led from A to Z, in Benin, Senegal and France."
+    },
+    "trustedBy": "They trust us",
+    "finalCta": {
+      "title": "Your project could be next",
+      "quoteButton": "Order your digital diagnostic",
+      "rdvButton": "Book an appointment"
+    },
+    "backToList": "Back to our work",
+    "similarProjects": "Similar projects",
+    "similarProjectCta": {
+      "title": "Have a similar project in mind?",
+      "quoteButton": "Start my project",
+      "rdvButton": "Book an appointment"
+    }
+  },
+  "about": {
+  "meta": {
+    "title": "About - Blinks Global Business",
+    "description": "Discover the story, mission and values of Blinks Global Business."
+  },
+  "eyebrow": "Our identity",
+  "title": "About Blinks Global Business",
+  "quote": "\"Redefining strategic excellence in the digital age to build tomorrow's leaders.\"",
+  "story": {
+    "title": "Our story",
+    "paragraph1": "Built on the conviction that technology is worthless without strategic vision, Blinks Global Business was born as a collective of passionate consultants. Today, we support businesses, institutions and associations across West Africa and Europe with a simple ambition: measurable results, project after project.",
+    "paragraph2": "Our journey is defined by a constant drive for innovation and a deep understanding of markets. We don't just advise, we co-create lasting solutions that redefine industries."
+  },
+  "mission": {
+    "title": "Our mission",
+    "text": "Supporting African organizations in their digital transformation through innovation, artificial intelligence, and high-performing strategies to accelerate their growth and competitiveness."
+  },
+  "vision": {
+    "title": "Our vision",
+    "text": "To become the go-to consulting firm for the digital transformation of African organizations, a leader in innovation, artificial intelligence and economic performance."
+  },
+  "values": { "title": "Our values" },
+  "kpis": [
+    { "label": "Years of expertise", "value": "10" },
+    { "label": "Clients supported", "value": "10+" },
+    { "label": "Countries served", "value": "3" },
+    { "label": "core team backed by a network of certified experts", "value": "One" }
+  ],
+  "team": {
+    "title": "Excellence at the service of your projects",
+    "subtitle": "A multidisciplinary team united by one shared passion: digital performance.",
+    "connect": "Connect"
+  },
+  "finalCta": {
+    "title": "Want to work with us?",
+    "rdvButton": "Book an appointment",
+    "quoteButton": "Request a quote"
+  }
+},
+  "contact": {
+  "meta": {
+    "title": "Contact - Blinks Global Business",
+    "description": "Get in touch with Blinks Global Business to discuss your digital transformation project."
+  },
+  "hero": {
+    "title": "Contact us",
+    "subtitle": "Ready to turn your vision into digital reality? Our team of experts is here to support you at every stage of your growth."
+  },
+  "info": {
+    "title": "Our contact details",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Hours",
+    "followUs": "Follow us"
+  },
+  "whatsapp": {
+    "title": "Let's talk on WhatsApp",
+    "text": "A quick reply for your urgent questions and project follow-up.",
+    "cta": "Start the conversation →"
+  },
+  "booking": {
+    "title": "Book a time slot",
+    "text": "Schedule a call with one of our senior consultants.",
+    "cta": "View the calendar →"
+  },
+  "faqTitle": "Frequently asked questions",
+  "form": {
+    "fullName": "Full name",
+    "emailLabel": "Business email",
+    "phone": "Phone",
+    "company": "Company",
+    "subject": "Subject",
+    "subjectOptions": {
+      "quote": "Quote request",
+      "appointment": "Book an appointment",
+      "general": "General question",
+      "support": "Support",
+      "partnership": "Partnership"
+    },
+    "message": "Message",
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "responseTime": "We guarantee a reply within 24 business hours.",
+    "success": "Message sent successfully! We'll get back to you within 24h.",
+    "error": "Something went wrong. Please try again or email us directly."
+  }
+},
+"legalPages": {
+  "lastUpdated": "Last updated",
+  "mentions": {
+    "title": "Legal Notice",
+    "metaTitle": "Legal Notice - Blinks Global Business",
+    "metaDescription": "Legal notice for the Blinks Global Business website."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "metaTitle": "Privacy Policy - Blinks Global Business",
+    "metaDescription": "Privacy policy and data protection for the Blinks Global Business website."
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "metaTitle": "Cookie Policy - Blinks Global Business",
+    "metaDescription": "Cookie usage policy for the Blinks Global Business website."
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "metaTitle": "Terms & Conditions - Blinks Global Business",
+    "metaDescription": "Terms of use and sale for Blinks Global Business."
+  }
+},
+"modals": {
+  "devis": {
+    "eyebrow": "Custom quote",
+    "title": "Describe your project",
+    "subtitle": "Response within 24 hours from one of our experts.",
+    "fullName": "Full name",
+    "email": "Business email",
+    "phone": "Phone",
+    "company": "Company name",
+    "projectType": "Project type",
+    "projectTypeOptions": {
+      "web": "Web development",
+      "app": "Web application",
+      "automation": "Automation / AI",
+      "marketing": "Digital marketing",
+      "audit": "Business audit",
+      "other": "Other"
+    },
+    "budget": "Estimated budget",
+    "budgetOptions": {
+      "under500k": "Under 500,000 FCFA",
+      "500kTo1m": "500,000 – 1,000,000 FCFA",
+      "1mTo5m": "1,000,000 – 5,000,000 FCFA",
+      "over5m": "Over 5,000,000 FCFA"
+    },
+    "description": "What are your main goals and challenges?",
+    "submit": "Send my request",
+    "submitting": "Sending...",
+    "success": "Request sent! We'll get back to you within 24h.",
+    "error": "Sending error. Please try again later."
+  },
+  "rdv": {
+    "title": "Book an appointment with our team",
+    "subtitle": "Select a date and time slot to discuss your project (30 minutes, Google Meet video call).",
+    "step1": "1. Choose a date",
+    "step2": "2. Choose a time",
+    "step3": "3. Your details",
+    "selectDateFirst": "Please select a date first.",
+    "checkingAvailability": "Checking availability...",
+    "noSlotsAvailable": "No time slot available that day.",
+    "appointmentSummary": "Appointment on",
+    "at": "at",
+    "fullName": "Full name",
+    "email": "Business email",
+    "phone": "Phone",
+    "confirm": "Confirm appointment",
+    "confirming": "Confirming...",
+    "emailNotice": "A confirmation email will be sent to you instantly after validation.",
+    "success": "Appointment confirmed and added to the calendar!",
+    "error": "Error. Please try again or contact us directly."
+  },
+  "tarifs": {
+    "eyebrow": "Support package request",
+    "title": "Let's talk about your project",
+    "subtitle": "After sending, you'll be redirected to WhatsApp to chat directly with our team.",
+    "fullName": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company (optional)",
+    "selectPackage": "Select a support package",
+    "diagnostic": "Strategic & Digital Diagnostic",
+    "customService": "Custom service",
+    "message": "Message (optional)",
+    "submit": "Send and continue on WhatsApp",
+    "submitting": "Sending...",
+    "success": "Message sent! Redirecting to WhatsApp...",
+    "error": "Sending error. Please try again or contact us directly.",
+    "whatsappGreeting": "Hello Blinks Global Business, my name is",
+    "whatsappInterest": "I'd like to learn more about",
+    "whatsappCompany": "Company",
+    "whatsappMessage": "Message"
+  }
+},
+"floatingButtons": {
+  "aiAssistant": "Blinks AI Assistant",
+  "aiComingSoon": "AI Assistant: coming in V2",
+  "whatsapp": "Chat on WhatsApp"
+},
+"newsletter": {
+  "placeholder": "Your email address",
+  "subscribe": "Subscribe",
+  "subscribing": "...",
+  "success": "Thank you! You're now subscribed to the newsletter.",
+  "error": "Something went wrong. Please try again in a moment."
+},
+"blog": {
+  "meta": {
+    "title": "Blog - Blinks Global Business",
+    "description": "Digital transformation, artificial intelligence, marketing and entrepreneurship: Blinks Global Business expertise in articles."
+  },
+  "title": "Blinks Global Business Blog",
+  "subtitle": "We share our expertise on digital transformation, AI, strategic marketing and entrepreneurship to power your growth.",
+  "newsletterTitle": "Stay up to date with our latest insights",
+  "newsletterSubtitle": "Join our readers who receive our monthly analyses straight to their inbox.",
+  "loadMore": "Load more articles",
+  "backToBlog": "Back to blog",
+  "relatedArticles": "Related articles",
+  "notFoundTitle": "Article not found - Blinks Global Business"
+}
+}

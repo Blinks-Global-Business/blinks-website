@@ -44,4 +44,5 @@ next-env.d.ts
 *.json
 !package.json
 !package-lock.json
+!messages/*.json
 blinks-website-*.json
