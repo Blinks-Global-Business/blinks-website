@@ -1,10 +1,11 @@
 import { useTranslations, useLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { Landmark } from "lucide-react";
 import ModalButton from "@/components/ui/ModalButton";
 import ServiceCard from "@/components/sections/ServiceCard";
 import { SERVICE_CATEGORIES } from "@/data/services";
 import { METHODOLOGY_STEPS } from "@/data/methodology";
 import { CATEGORY_ICONS } from "@/lib/serviceIcons";
-import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata() {
   const t = await getTranslations("services.meta");
@@ -14,6 +15,7 @@ export async function generateMetadata() {
 export default function ServicesPage() {
   const t = useTranslations("services");
   const locale = useLocale();
+  const institutionalMissions = t.raw("institutional.missions");
 
   return (
     <>
@@ -36,6 +38,12 @@ export default function ServicesPage() {
             </a>
           ))}
           <a
+            href="#institutionnel"
+            className="shrink-0 font-body text-sm text-text border border-border rounded-full px-4 py-2 hover:border-primary hover:text-primary transition-colors"
+          >
+            {t("institutional.title").split("—")[1]?.trim() || t("institutional.title")}
+          </a>
+          <a
             href="/offres"
             className="shrink-0 font-body text-sm text-primary-dark bg-accent/20 border border-accent rounded-full px-4 py-2 hover:bg-accent/30 transition-colors"
           >
@@ -50,7 +58,7 @@ export default function ServicesPage() {
         return (
           <section key={cat.id} id={cat.id} className={`scroll-mt-32 ${isEven ? "" : "bg-primary/5"}`}>
             <div className="max-w-7xl mx-auto px-6 py-16">
-              <div className="grid md:grid-cols-3 gap-8 mb-10 items-center">
+              <div className="grid md:grid-cols-3 gap-8 mb-6 items-center">
                 <div className="md:col-span-1 relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                   <img src={cat.image} alt={cat.label[locale]} className="w-full h-full object-cover" />
                 </div>
@@ -58,19 +66,62 @@ export default function ServicesPage() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <Icon className="text-primary" size={22} />
                   </div>
-                  <h2 className="font-heading font-bold text-2xl md:text-3xl text-text">{cat.label[locale]}</h2>
+                  <h2 className="font-heading font-bold text-2xl md:text-3xl text-text mb-3">{cat.label[locale]}</h2>
+                  <p className="font-body text-text-muted leading-relaxed">{cat.description[locale]}</p>
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                 {cat.services.map((service) => (
                   <ServiceCard key={service.id} service={service} Icon={Icon} />
                 ))}
+              </div>
+
+              <div className="bg-primary/5 border-l-4 border-accent rounded-r-lg px-5 py-4 max-w-2xl">
+                <p className="font-body text-sm text-text">
+                  <span className="font-semibold text-primary">{t("impactBusinessLabel")} : </span>
+                  {cat.impactBusiness[locale]}
+                </p>
               </div>
             </div>
           </section>
         );
       })}
+
+      {/* GOUVERNANCE IA & OFFRE INSTITUTIONNELLE */}
+      <section id="institutionnel" className="scroll-mt-32 bg-primary">
+        <div className="max-w-4xl mx-auto px-6 py-20">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center shrink-0">
+              <Landmark className="text-accent" size={22} />
+            </div>
+            <h2 className="font-heading font-bold text-2xl md:text-3xl text-white">{t("institutional.title")}</h2>
+          </div>
+          <p className="font-body text-white/80 leading-relaxed mb-8">{t("institutional.intro")}</p>
+
+          <p className="font-body text-sm uppercase tracking-wide text-accent font-semibold mb-4">
+            {t("institutional.missionsTitle")}
+          </p>
+          <ul className="space-y-3 mb-8">
+            {institutionalMissions.map((mission) => (
+              <li key={mission} className="flex items-start gap-3 font-body text-white/90">
+                <span className="text-accent font-bold mt-0.5">—</span>
+                {mission}
+              </li>
+            ))}
+          </ul>
+
+          <p className="font-body text-sm text-white/70 italic mb-2">{t("institutional.partnership")}</p>
+          <p className="font-body text-sm text-accent font-semibold mb-8">{t("institutional.quoteNotice")}</p>
+
+          <div className="flex flex-wrap gap-4">
+            <ModalButton type="devis" variant="primary">{t("institutional.primaryButton")}</ModalButton>
+            <ModalButton type="rdv" variant="ghost" className="!text-white !border !border-white/30 hover:!bg-white/10">
+              {t("institutional.secondaryButton")}
+            </ModalButton>
+          </div>
+        </div>
+      </section>
 
       {/* MÉTHODOLOGIE DARE */}
       <section className="bg-primary/5">
@@ -81,26 +132,26 @@ export default function ServicesPage() {
           <p className="font-body text-text-muted mb-14 max-w-xl mx-auto">{t("methodology.subtitle")}</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {METHODOLOGY_STEPS.map((step) => {
-  const StepIcon = step.icon;
-  return (
-    <div key={step.letter} className="relative flex flex-col items-center text-center">
-      <div className="relative">
-        <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-heading font-bold text-xl">
-          {step.letter}
-        </div>
-        <div className="w-9 h-9 rounded-full bg-accent flex items-center justify-center absolute -bottom-2 -right-2 border-2 border-bg">
-          <StepIcon className="text-primary-dark" size={16} />
-        </div>
-      </div>
-      <p className="font-heading font-bold text-sm uppercase tracking-wide text-text mt-5">
-        {step.label[locale]}
-      </p>
-      <p className="font-body text-xs text-text-muted mt-2 max-w-[160px]">
-        {step.description[locale]}
-      </p>
-    </div>
-  );
-})}
+              const StepIcon = step.icon;
+              return (
+                <div key={step.letter} className="relative flex flex-col items-center text-center">
+                  <div className="relative">
+                    <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-heading font-bold text-xl">
+                      {step.letter}
+                    </div>
+                    <div className="w-9 h-9 rounded-full bg-accent flex items-center justify-center absolute -bottom-2 -right-2 border-2 border-bg">
+                      <StepIcon className="text-primary-dark" size={16} />
+                    </div>
+                  </div>
+                  <p className="font-heading font-bold text-sm uppercase tracking-wide text-text mt-5">
+                    {step.label[locale]}
+                  </p>
+                  <p className="font-body text-xs text-text-muted mt-2 max-w-[160px]">
+                    {step.description[locale]}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

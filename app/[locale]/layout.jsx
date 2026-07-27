@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Sora, Inter, Fraunces } from "next/font/google";
 import "../globals.css";
@@ -21,11 +21,10 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export const metadata = {
-  title: "Blinks Global Business - Conseil, Croissance, Excellence",
-  description:
-    "Agence de transformation digitale au Bénin, au Sénégal et en France : création de site web, IA, branding et croissance commerciale pour PME. Résultats mesurables.",
-};
+export async function generateMetadata() {
+  const t = await getTranslations("siteMeta");
+  return { title: t("title"), description: t("description") };
+}
 
 export default async function LocaleLayout({ children, params }) {
   const { locale } = await params;

@@ -6,6 +6,7 @@
     "expertiseDesc": "Nos 4 pôles et notre méthode de travail",
     "offersLabel": "Nos Offres",
     "offersDesc": "Diagnostic, accompagnements et tarifs",
+    "institutional": "Institutionnel",
     "realisations": "Réalisations",
     "about": "À propos",
     "blog": "Blog",
@@ -19,94 +20,116 @@
     "terms": "Conditions générales"
   },
   "footer": {
-  "description": "Cabinet international de conseil en transformation digitale.",
+  "description": "Blinks Global Business - Cabinet de transformation digitale. Nous aidons les entreprises et organisations à attirer plus de clients et à travailler plus efficacement grâce au digital et à l'IA. Bénin · France · Sénégal.",
   "navigationTitle": "Navigation",
   "legalTitle": "Légal",
   "contactTitle": "Contact",
   "hours": "Lun-Jeu : 9h-18h · Ven : 9h-12h (GMT+1, Cotonou)",
   "rights": "Tous droits réservés."
   },
+  "siteMeta": {
+  "title": "Blinks Global Business - Cabinet de transformation digitale (Bénin, France, Sénégal)",
+  "description": "Cabinet de transformation digitale. Nous accompagnons entreprises et institutions dans le digital et l'IA pour plus de clients et plus d'efficacité. Réservez un appel gratuit."
+  },
   "common": {
     "tagline": "Conseil. Croissance. Excellence."
   },
   "home": {
-    "meta": {
-    "title": "Blinks Global Business - Conseil, Croissance, Excellence",
-    "description": "Agence de transformation digitale au Bénin, au Sénégal et en France : création de site web, IA, branding et croissance commerciale pour PME."
-    },
-    "hero": {
-      "eyebrow": "Cabinet de conseil en transformation digitale",
-      "titleLine1": "Plus de clients. Plus de visibilité.",
-      "titleHighlight": "Plus de résultats.",
-      "subtitle": "Blinks Global Business accompagne les entreprises africaines et internationales dans leur transformation digitale, l'intégration de l'IA et leur développement commercial.",
-      "requestQuote": "Demander un devis"
-    },
-    "kpis": [
-      { "value": "3", "label": "pays d'implantation (Bénin, France, Sénégal)" },
-      { "value": "25+", "label": "Projets livrés" },
-      { "value": "10", "label": "ans d'expertise cumulée de nos consultants" },
-      { "value": "7", "label": "secteurs d'activité" }
-    ],
-    "mission": {
-      "eyebrow": "Notre mission",
-      "title": "Votre croissance, augmentée par l'intelligence artificielle",
-      "text": "Accompagner les organisations africaines dans leur transformation digitale grâce à l'innovation, à l'intelligence artificielle et à des stratégies performantes pour accélérer leur croissance et leur compétitivité."
-    },
-    "expertise": {
-      "title": "Nos domaines d'expertise",
-      "subtitle": "Des solutions concrètes pour chaque étape de votre transformation.",
-      "viewAll": "Voir tous nos services",
-      "servicesAvailable": "{count} services disponibles",
-      "learnMore": "En savoir plus"
-    },
-    "accompagnements": {
-      "title": "Nos accompagnements",
-      "subtitle": "Un accompagnement mensuel tout inclus, sans surprise. Vous choisissez le niveau, nous livrons chaque mois.",
-      "recommended": "★ RECOMMANDÉ",
-      "viewAllPricing": "Voir tous les détails et tarifs"
-    },
-    "whyUs": {
-      "title": "Pourquoi Blinks Global Business ?",
-      "excellence": "Excellence",
-      "excellenceSubtitle": "Notre norme quotidienne",
-      "award": { "title": "Expertise certifiée", "description": "Nos consultants détiennent les certifications les plus reconnues du marché." },
-      "agility": { "title": "Agilité d'exécution", "description": "Nous déployons des solutions plus rapidement grâce à nos méthodologies éprouvées." },
-      "engagement": { "title": "Engagement résultat", "description": "Chaque mission est pilotée par des objectifs mesurables et un vrai suivi de performance." }
-    },
-    "caseStudies": {
-      "title": "Études de cas",
-      "subtitle": "Découvrez comment nous transformons les défis de nos clients en résultats concrets.",
-      "viewCaseStudy": "Voir l'étude de cas"
-    },
-    "trustedBy": "Ils nous font confiance",
-    "faq": {
-      "title": "Questions fréquentes",
-      "subtitle": "Tout ce que vous devez savoir avant de démarrer."
-    },
-    "finalCta": {
-      "title": "Prêt à franchir le cap du digital ?",
-      "subtitle": "Réservez un appel gratuit de 30 minutes : repartez avec un diagnostic concret de votre potentiel digital."
-    }
+  "meta": {
+    "title": "Blinks Global Business - Cabinet de transformation digitale",
+    "description": "Cabinet de transformation digitale. Nous accompagnons entreprises et institutions dans le digital et l'IA pour plus de clients et plus d'efficacité. Réservez un appel gratuit."
   },
+  "hero": {
+    "title": "Cabinet de transformation digitale",
+    "subtitle": "Plus de clients. Plus de visibilité. Plus de résultats.",
+    "intro": "Blinks Global Business accompagne les entreprises et les organisations dans leur transformation digitale et l'intégration de l'intelligence artificielle, pour attirer plus de clients et travailler plus efficacement.",
+    "primaryCta": "Réserver un appel gratuit",
+    "secondaryCta": "Demander un audit"
+  },
+  "kpis": [
+    { "value": "25+", "label": "projets livrés" },
+    { "value": "10", "label": "ans d'expertise cumulée" },
+    { "value": "7", "label": "secteurs d'activité" },
+    { "value": "3", "label": "pays : Bénin, France, Sénégal" }
+  ],
+  "mission": {
+    "eyebrow": "Notre mission",
+    "text": "Aider les entreprises et organisations à transformer leur façon de travailler grâce au digital, pour attirer plus de clients et travailler plus efficacement."
+  },
+  "expertise": {
+    "title": "Nos domaines d'expertise",
+    "subtitle": "Des solutions concrètes pour chaque étape de votre transformation.",
+    "viewAll": "Voir tous nos services",
+    "learnMore": "En savoir plus"
+  },
+  "accompagnements": {
+    "title": "Nos accompagnements",
+    "subtitle": "Trois formules pour avancer à votre rythme : de la mise en visibilité jusqu'à l'accompagnement complet. Vous choisissez le niveau, nous pilotons la transformation.",
+    "recommended": "★ RECOMMANDÉ",
+    "viewAllPricing": "Voir tous les détails et tarifs"
+  },
+  "whyUs": {
+    "title": "Pourquoi Blinks Global Business ?",
+    "excellence": "Excellence",
+    "excellenceSubtitle": "Notre norme quotidienne",
+    "award": { "title": "Expertise certifiée", "description": "10 ans d'expertise cumulée, des méthodes éprouvées et une exigence de qualité sur chaque livrable." },
+    "agility": { "title": "Agilité d'exécution", "description": "Des équipes réactives qui livrent vite, sans usine à gaz, avec la méthode DARE (Diagnostic – Analyse – Résultats – Expansion)." },
+    "engagement": { "title": "Engagement résultat", "description": "Des objectifs clairs, des indicateurs suivis : nous nous engageons sur l'impact, pas seulement sur la prestation." },
+    "institutional": { "title": "Transformation numérique des institutions", "description": "Pour les ministères, agences, ONG et grands projets, nous déployons des missions de transformation numérique, gouvernance IA, sécurité, conformité, stratégie en partenariat avec des experts reconnus." }
+  },
+  "caseStudies": {
+    "title": "Études de cas",
+    "subtitle": "Des résultats concrets, secteur par secteur. Voici comment nous avons aidé des entreprises et organisations à gagner en visibilité, en clients et en efficacité.",
+    "proofBand": "25+ projets livrés · 10 ans d'expertise cumulée · 7 secteurs · Bénin – France – Sénégal",
+    "viewCaseStudy": "Voir l'étude de cas"
+  },
+  "trustedBy": "Ils nous font confiance",
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir avant de démarrer."
+  },
+  "finalCta": {
+    "title": "Prêt à transformer votre activité ?",
+    "subtitle": "Réservez un appel gratuit de 30 minutes : repartez avec un diagnostic concret de votre potentiel digital.",
+    "primaryButton": "Réserver mon appel gratuit"
+  }
+},
   "services": {
-    "meta": {
+  "meta": {
     "title": "Notre Expertise - Blinks Global Business",
     "description": "Découvrez nos 4 pôles d'expertise et notre méthode de travail pour votre transformation digitale."
-    },
-    "title": "Notre expertise",
-    "subtitle": "Nous réunissons stratégie, marketing digital, développement technologique et intelligence artificielle sous un même toit : un seul partenaire, une seule vision.",
-    "viewOffers": "Voir nos offres →",
-    "solutionLabel": "La solution Blinks Global Business",
-    "methodology": {
-      "title": "Notre méthode de travail : DARE",
-      "subtitle": "Une approche éprouvée en 4 étapes pour garantir la réussite de vos projets."
-    },
-    "finalCta": {
-      "title": "Prêt à transformer votre activité ?",
-      "subtitle": "Découvrez nos accompagnements et démarrez par un diagnostic offert.",
-      "button": "Découvrir nos offres"
-    }
   },
+  "title": "Des offres concrètes pour transformer votre business",
+  "subtitle": "Transformer votre activité, ce n'est pas empiler des outils. C'est aligner trois choses : une stratégie claire, les bons outils digitaux et les compétences pour les utiliser. Blinks Global Business réunit ces trois piliers pour vous faire gagner des clients et du temps.",
+  "viewOffers": "Voir nos offres →",
+  "solutionLabel": "La solution Blinks Global Business",
+  "impactBusinessLabel": "Impact business",
+  "methodology": {
+    "title": "Notre méthode de travail : DARE",
+    "subtitle": "Une approche éprouvée en 4 étapes pour garantir la réussite de vos projets."
+  },
+  "institutional": {
+    "title": "Gouvernance IA & transformation numérique - Offre institutionnelle",
+    "intro": "Une offre dédiée aux institutions, organisations publiques, ONG et grands projets qui doivent transformer leurs processus et sécuriser leur usage du numérique et de l'IA.",
+    "missionsTitle": "Nos missions :",
+    "missions": [
+      "Gouvernance de l'intelligence artificielle (cadres éthiques, politiques d'usage, chartes IA)",
+      "Sécurité numérique et protection des données",
+      "Conformité réglementaire et normes internationales",
+      "Stratégie numérique institutionnelle (roadmap, priorisation, indicateurs)",
+      "Digitalisation des processus administratifs et des services publics"
+    ],
+    "partnership": "En partenariat avec un cabinet expert reconnu en gouvernance IA et sécurité numérique.",
+    "quoteNotice": "Prestation sur devis.",
+    "primaryButton": "Demander un audit",
+    "secondaryButton": "Parler de votre projet"
+  },
+  "finalCta": {
+    "title": "Prêt à transformer votre activité ?",
+    "subtitle": "Découvrez nos accompagnements et démarrez par un diagnostic offert.",
+    "button": "Découvrir nos offres"
+  }
+ },
   "offers": {
     "meta": {
     "title": "Nos Offres & Tarifs - Blinks Global Business",
@@ -164,16 +187,16 @@
     },
     "trustedBy": "Ils nous font confiance",
     "finalCta": {
-      "title": "Votre projet pourrait être le prochain",
-      "quoteButton": "Commandez votre diagnostic digital",
-      "rdvButton": "Prendre rendez-vous"
+    "title": "Votre projet pourrait être le prochain",
+    "quoteButton": "Demander un audit",
+    "rdvButton": "Réserver un appel gratuit"
     },
     "backToList": "Retour aux réalisations",
     "similarProjects": "Réalisations similaires",
     "similarProjectCta": {
-      "title": "Un projet similaire en tête ?",
-      "quoteButton": "Démarrer mon projet",
-      "rdvButton": "Prendre rendez-vous"
+    "title": "Un projet similaire en tête ?",
+    "quoteButton": "Demander un audit",
+    "rdvButton": "Réserver un appel gratuit"
     }
   },
   "about": {
@@ -210,9 +233,49 @@
     "connect": "Connect"
   },
   "finalCta": {
-    "title": "Envie de collaborer avec nous ?",
-    "rdvButton": "Prendre rendez-vous",
-    "quoteButton": "Demander un devis"
+  "title": "Envie de collaborer avec nous ?",
+  "rdvButton": "Réserver un appel gratuit",
+  "quoteButton": "Demander un audit"
+  }
+},
+  "institutional": {
+  "meta": {
+    "title": "Transformation numérique des institutions - Blinks Global Business",
+    "description": "Gouvernance IA, sécurité, conformité et stratégie numérique pour institutions, ONG et grands projets, en partenariat avec des experts reconnus."
+  },
+  "title": "Transformation numérique des institutions et organisations",
+  "subtitle": "Gouvernance IA, sécurité, conformité et stratégie numérique, en partenariat avec des experts reconnus.",
+  "context": {
+    "title": "Contexte",
+    "paragraph1": "Les institutions, organisations publiques, ONG et grands projets doivent aujourd'hui transformer leurs processus, leurs services et leurs modes de décision pour rester efficaces, transparents et souverains dans un environnement numérique en évolution rapide.",
+    "paragraph2": "Blinks Global Business accompagne ces organisations dans leur transformation numérique, en mobilisant des partenaires experts en gouvernance IA, sécurité et stratégie numérique."
+  },
+  "domains": {
+    "title": "Nos domaines d'intervention",
+    "items": [
+      "Gouvernance de l'intelligence artificielle (cadres éthiques, politiques d'usage, chartes IA)",
+      "Sécurité numérique et protection des données",
+      "Conformité réglementaire et normes internationales",
+      "Stratégie numérique institutionnelle (roadmap, priorisation, indicateurs)",
+      "Digitalisation des processus administratifs et des services publics",
+      "Formation et sensibilisation (IA responsable, compétences numériques)"
+    ]
+  },
+  "approach": {
+    "title": "Notre approche",
+    "intro": "Pour ces missions, Blinks Global Business agit comme coordinateur et interface, en mobilisant un consortium d'experts :",
+    "experts": [
+      "Experts en gouvernance IA et éthique",
+      "Experts en sécurité numérique et protection des données",
+      "Experts en conformité et cadres réglementaires",
+      "Experts en stratégie et conduite du changement"
+    ],
+    "closing": "Blinks coordonne la mission, garantit la cohérence de l'ensemble et assure l'interface avec vos équipes, du diagnostic à la mise en œuvre, selon notre méthode DARE (Diagnostic – Analyse – Résultats – Expansion)."
+  },
+  "cta": {
+    "title": "Vous portez un projet de transformation numérique ? Parlons-en.",
+    "primaryButton": "Discuter de votre projet",
+    "secondaryButton": "Demander un audit institutionnel sur devis"
   }
 },
   "contact": {

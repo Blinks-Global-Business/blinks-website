@@ -7,6 +7,7 @@ import {
   Award,
   Zap,
   Handshake,
+  Landmark,
 } from "lucide-react";
 import ModalButton from "@/components/ui/ModalButton";
 import Card from "@/components/ui/Card";
@@ -24,7 +25,7 @@ export async function generateMetadata() {
   return { title: t("title"), description: t("description") };
 }
 
-const WHY_US_ICONS = { award: Award, agility: Zap, engagement: Handshake };
+const WHY_US_ICONS = { award: Award, agility: Zap, engagement: Handshake, institutional: Landmark };
 
 const CASE_STUDIES_PREVIEW = CASE_STUDIES.slice(0, 3);
 
@@ -45,21 +46,23 @@ export default function HomePage() {
 
   const kpis = t.raw("kpis");
   const kpisLoop = [...kpis, ...kpis];
-  const whyUsKeys = ["award", "agility", "engagement"];
+  const whyUsKeys = ["award", "agility", "engagement", "institutional"];
 
   return (
     <>
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p className="font-accent italic text-primary text-lg mb-4">{t("hero.eyebrow")}</p>
-          <h1 className="font-heading font-bold text-4xl md:text-5xl text-text leading-tight mb-6">
-            {t("hero.titleLine1")} <span className="text-primary">{t("hero.titleHighlight")}</span>
+          <h1 className="font-heading font-bold text-4xl md:text-5xl text-text leading-tight mb-3">
+            {t("hero.title")}
           </h1>
-          <p className="font-body text-text-muted text-lg mb-8 max-w-md">{t("hero.subtitle")}</p>
+          <p className="font-accent italic text-primary text-xl md:text-2xl mb-5">
+            {t("hero.subtitle")}
+          </p>
+          <p className="font-body text-text-muted text-lg mb-8 max-w-md">{t("hero.intro")}</p>
           <div className="flex flex-wrap gap-4">
-            <ModalButton type="rdv" variant="primary">{tNav("bookAppointment")}</ModalButton>
-            <ModalButton type="devis" variant="outline">{t("hero.requestQuote")}</ModalButton>
+            <ModalButton type="rdv" variant="primary">{t("hero.primaryCta")}</ModalButton>
+            <ModalButton type="devis" variant="outline">{t("hero.secondaryCta")}</ModalButton>
           </div>
         </div>
         <div className="relative">
@@ -85,13 +88,10 @@ export default function HomePage() {
       {/* NOTRE MISSION */}
       <section className="border-t-4 border-primary">
         <div className="max-w-3xl mx-auto px-6 py-20 text-center">
-          <p className="font-body text-xs uppercase tracking-widest text-primary font-semibold mb-4">
-            {t("mission.eyebrow")}
-          </p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-text mb-6 leading-tight">
-            {t("mission.title")}
+            {t("mission.eyebrow")}
           </h2>
-          <p className="font-body text-text-muted leading-relaxed">{t("mission.text")}</p>
+          <p className="font-body text-text-muted text-lg leading-relaxed">{t("mission.text")}</p>
         </div>
       </section>
 
@@ -117,9 +117,7 @@ export default function HomePage() {
                     <Icon className="text-primary" size={22} />
                   </div>
                   <h3 className="font-heading font-semibold text-lg text-text mb-2">{cat.label[locale]}</h3>
-                  <p className="font-body text-sm text-text-muted mb-4">
-                    {t("expertise.servicesAvailable", { count: cat.services.length })}
-                  </p>
+                  <p className="font-body text-sm text-text-muted mb-4">{cat.benefit[locale]}</p>
                   <Link href={`/services#${cat.id}`} className="font-body text-sm text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
                     {t("expertise.learnMore")} <ArrowRight size={14} />
                   </Link>
@@ -204,10 +202,13 @@ export default function HomePage() {
       {/* RÉALISATIONS (aperçu) */}
       <section className="bg-primary/5">
         <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-6">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-text mb-4">{t("caseStudies.title")}</h2>
             <p className="font-body text-text-muted">{t("caseStudies.subtitle")}</p>
           </div>
+          <p className="font-body text-xs text-text-muted text-center mb-8 uppercase tracking-wide">
+            {t("caseStudies.proofBand")}
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {CASE_STUDIES_PREVIEW.map((study) => (
               <Card key={study.id} className="!p-0 overflow-hidden">
@@ -270,9 +271,9 @@ export default function HomePage() {
             <h2 className="font-heading font-bold text-2xl md:text-3xl text-white mb-4">{t("finalCta.title")}</h2>
             <p className="font-body text-white/70 max-w-lg mx-auto mb-8">{t("finalCta.subtitle")}</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <ModalButton type="rdv" variant="primary">{tNav("bookAppointment")}</ModalButton>
+              <ModalButton type="rdv" variant="primary">{t("finalCta.primaryButton")}</ModalButton>
               <ModalButton type="devis" variant="ghost" className="!text-white !border !border-white/30 hover:!bg-white/10">
-                {t("hero.requestQuote")}
+                {t("hero.secondaryCta")}
               </ModalButton>
             </div>
           </div>

@@ -6,6 +6,18 @@ export const SERVICE_CATEGORIES = [
       fr: "Marketing Communication & Croissance Commerciale",
       en: "Marketing, Communication & Business Growth",
     },
+    benefit: {
+    fr: "Attirer plus de clients et structurer votre développement commercial.",
+    en: "Attract more clients and structure your sales development.",
+    },
+    description: {
+    fr: "Nous construisons votre machine à générer des clients : stratégie d'acquisition, présence en ligne et outils commerciaux qui transforment l'attention en rendez-vous, puis en ventes.",
+    en: "We build your client-generation engine: acquisition strategy, online presence and sales tools that turn attention into appointments, then into sales.",
+    },
+    impactBusiness: {
+    fr: "plus de leads qualifiés et un pipeline commercial mesurable.",
+    en: "more qualified leads and a measurable sales pipeline.",
+    },
     services: [
       {
         id: "community-management",
@@ -77,6 +89,18 @@ export const SERVICE_CATEGORIES = [
     id: "digital-intelligence-artificielle",
     image: "/images/services/digital-intelligence-artificielle.jpg",
     label: { fr: "Digital & Intelligence Artificielle", en: "Digital & Artificial Intelligence" },
+    benefit: {
+    fr: "Automatiser vos tâches et gagner du temps chaque semaine grâce à l'IA.",
+    en: "Automate your tasks and save time every week with AI.",
+    },
+    description: {
+    fr: "Nous mettons l'IA et l'automatisation au service de votre quotidien : moins de tâches répétitives, des décisions plus rapides et des processus qui tournent tout seuls.",
+    en: "We put AI and automation to work for your day-to-day: fewer repetitive tasks, faster decisions and processes that run on their own.",
+    },
+    impactBusiness: {
+    fr: "des processus simplifiés et du temps gagné chaque semaine.",
+    en: "simplified processes and time saved every week.",
+    },
     services: [
       {
         id: "sites-applications",
@@ -148,6 +172,17 @@ export const SERVICE_CATEGORIES = [
     id: "image-marque-design",
     image: "/images/services/image-marque-design.jpg",
     label: { fr: "Image de Marque & Design", en: "Brand Image & Design" },
+    benefit: {
+    fr: "Une image professionnelle et cohérente qui inspire confiance.",
+    en: "A professional, consistent image that inspires trust.",
+    },description: {
+    fr: "Nous donnons à votre marque une image à la hauteur de vos ambitions : identité claire, cohérente et professionnelle sur tous vos supports.",
+    en: "We give your brand an image worthy of your ambitions: a clear, consistent and professional identity across all your materials.",
+    },
+    impactBusiness: {
+    fr: "une image professionnalisée qui inspire confiance.",
+    en: "a professional image that inspires trust.",
+    },
     services: [
       {
         id: "identite-visuelle-branding",
@@ -203,6 +238,18 @@ export const SERVICE_CATEGORIES = [
     id: "publicite-media-audiovisuel",
     image: "/images/services/publicite-media-audiovisuel.jpg",
     label: { fr: "Publicité, Média & Production Audiovisuelle", en: "Advertising, Media & Video Production" },
+    benefit: {
+    fr: "Des contenus qui captent l'attention et font vendre.",
+    en: "Content that captures attention and drives sales.",
+    },
+    description: {
+    fr: "Nous produisons des contenus qui font vendre : vidéos, motion design, spots et campagnes pensés pour capter l'attention et convertir.",
+    en: "We produce content that sells: videos, motion design, spots and campaigns designed to capture attention and convert.",
+    },
+    impactBusiness: {
+    fr: "une visibilité renforcée et des messages qui convertissent.",
+    en: "stronger visibility and messages that convert.",
+    },
     services: [
       {
         id: "campagnes-publicitaires-digitales",
