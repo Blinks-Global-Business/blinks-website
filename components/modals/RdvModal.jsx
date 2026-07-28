@@ -10,7 +10,15 @@ import DatePicker from "@/components/ui/DatePicker";
 const INITIAL_STATE = { name: "", email: "", phone: "" };
 
 function toDateString(date) {
-  return date.toISOString().split("T")[0];
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+// Convertit un créneau "Bénin" (ex: "10:15") en instant UTC précis pour ce jour-là.
+function beninSlotToUTC(dateStr, slot) {
+  return new Date(`${dateStr}T${slot}:00+01:00`);
 }
 
 export default function RdvModal() {
@@ -18,20 +26,43 @@ export default function RdvModal() {
   const locale = useLocale();
   const t = useTranslations("modals.rdv");
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedSlot, setSelectedSlot] = useState(null);
-  const [availableSlots, setAvailableSlots] = useState([]);
+  const [selectedSlot, setSelectedSlot] = useState(null); // toujours l'heure Bénin (source de vérité)
+  const [availableSlots, setAvailableSlots] = useState([]); // heures Bénin brutes reçues de l'API
   const [loadingSlots, setLoadingSlots] = useState(false);
   const [formData, setFormData] = useState(INITIAL_STATE);
   const [status, setStatus] = useState("idle");
+  const [clientTimezone, setClientTimezone] = useState("Africa/Porto-Novo");
 
   const dateLocale = locale === "en" ? "en-US" : "fr-FR";
+
+  // Détecte le fuseau horaire du visiteur au chargement (une seule fois)
+  useEffect(() => {
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz) setClientTimezone(tz);
+    } catch {
+      // Navigateur trop ancien : on reste sur l'heure du Bénin par défaut
+    }
+  }, []);
 
   function formatDate(date) {
     return date.toLocaleDateString(dateLocale, { weekday: "long", day: "numeric", month: "long" });
   }
 
+  // Convertit un créneau Bénin en heure affichée dans le fuseau du visiteur
+  function toLocalDisplay(slot) {
+    if (!selectedDate) return slot;
+    const utcInstant = beninSlotToUTC(toDateString(selectedDate), slot);
+    return utcInstant.toLocaleTimeString(dateLocale, {
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: clientTimezone,
+    });
+  }
+
   useEffect(() => {
     if (!selectedDate) return;
+
     setLoadingSlots(true);
     setSelectedSlot(null);
 
@@ -52,7 +83,12 @@ export default function RdvModal() {
       const res = await fetch("/api/rendez-vous", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, date: selectedDate.toISOString(), slot: selectedSlot }),
+        body: JSON.stringify({
+          ...formData,
+          date: toDateString(selectedDate), // heure Bénin — inchangé
+          slot: selectedSlot, // heure Bénin — inchangé
+          clientTimezone, // 🆕 fuseau détecté du visiteur
+        }),
       });
       if (!res.ok) throw new Error();
       setStatus("success");
@@ -63,6 +99,8 @@ export default function RdvModal() {
       setStatus("error");
     }
   };
+
+  const showLocalNote = clientTimezone !== "Africa/Porto-Novo";
 
   return (
     <Modal isOpen={activeModal === "rdv"} onClose={closeModal} maxWidth="max-w-2xl">
@@ -93,27 +131,37 @@ export default function RdvModal() {
           )}
 
           {selectedDate && !loadingSlots && availableSlots.length > 0 && (
-            <div className="grid grid-cols-2 gap-2">
-              {availableSlots.map((slot) => (
-                <button
-                  key={slot}
-                  type="button"
-                  onClick={() => setSelectedSlot(slot)}
-                  className={`font-body text-sm rounded-md py-2.5 border transition-colors ${
-                    selectedSlot === slot
-                      ? "bg-accent border-accent text-primary-dark font-medium"
-                      : "border-border text-text hover:border-primary"
-                  }`}
-                >
-                  {slot}
-                </button>
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-2 gap-2">
+                {availableSlots.map((slot) => (
+                  <button
+                    key={slot}
+                    type="button"
+                    onClick={() => setSelectedSlot(slot)}
+                    className={`font-body text-sm rounded-md py-2.5 border transition-colors ${
+                      selectedSlot === slot
+                        ? "bg-accent border-accent text-primary-dark font-medium"
+                        : "border-border text-text hover:border-primary"
+                    }`}
+                  >
+                    {toLocalDisplay(slot)}
+                  </button>
+                ))}
+              </div>
+              {showLocalNote && (
+                <p className="font-body text-[11px] text-text-muted italic mt-2">
+                  {locale === "en"
+                    ? "Times shown in your local timezone."
+                    : "Heures affichées selon votre fuseau horaire."}
+                </p>
+              )}
+            </>
           )}
 
           {selectedDate && selectedSlot && (
             <p className="font-body text-xs text-primary bg-primary/5 rounded-md px-3 py-2 mt-4">
-              {t("appointmentSummary")} <strong>{formatDate(selectedDate)}</strong> {t("at")} <strong>{selectedSlot}</strong>
+              {t("appointmentSummary")} <strong>{formatDate(selectedDate)}</strong> {t("at")}{" "}
+              <strong>{toLocalDisplay(selectedSlot)}</strong>
             </p>
           )}
         </div>
