@@ -12,7 +12,7 @@ export const TEAM_MEMBERS = [
     linkedin: "https://www.linkedin.com/in/imen-imorou-toko-3b9361269?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
-    name: "Aïcha Rassoul Lo",
+    name: "Sokhna Aïssatou Lo",
     role: { fr: "Assistante développement commerciale & communication digitale", en: "Business Development & Digital Communication Assistant" },
     photo: "/images/team/aichalo.jpeg",
     linkedin: "https://www.linkedin.com/in/sokhna-aïssatou-lo-19018b426?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
