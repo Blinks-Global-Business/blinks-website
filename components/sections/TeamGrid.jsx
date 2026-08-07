@@ -33,14 +33,16 @@ export default function TeamGrid({ members }) {
           </div>
           <h3 className="font-heading font-semibold text-sm text-text">{member.name}</h3>
           <p className="font-body text-xs text-text-muted mt-0.5">{member.role[locale]}</p>
-          <a
-            href={member.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-primary text-xs font-body mt-2 hover:underline"
-          >
-            <FaLinkedinIn size={12} /> {t("connect")}
-          </a>
+          {member.linkedin && (
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-primary text-xs font-body mt-2 hover:underline"
+            >
+              <FaLinkedinIn size={12} /> {t("connect")}
+            </a>
+          )}
         </div>
       ))}
     </div>

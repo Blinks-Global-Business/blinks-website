@@ -2,8 +2,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Rocket, Eye } from "lucide-react";
 import ModalButton from "@/components/ui/ModalButton";
 import KpiBand from "@/components/sections/KpiBand";
-import TeamGrid from "@/components/sections/TeamGrid";
-import { TEAM_MEMBERS } from "@/data/team";
+import TeamSection from "@/components/sections/TeamSection";
 import { COMPANY_VALUES } from "@/data/values";
 import { getTranslations } from "next-intl/server";
 
@@ -87,7 +86,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 py-20 text-center">
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-text mb-3">{t("team.title")}</h2>
           <p className="font-body text-text-muted mb-14 max-w-lg mx-auto">{t("team.subtitle")}</p>
-          <TeamGrid members={TEAM_MEMBERS} />
+          <TeamSection />
         </div>
       </section>
 

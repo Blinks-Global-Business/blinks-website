@@ -252,9 +252,11 @@
     { "label": "core team backed by a network of certified experts", "value": "One" }
   ],
   "team": {
-    "title": "Excellence at the service of your projects",
-    "subtitle": "A multidisciplinary team united by one shared passion: digital performance.",
-    "connect": "Connect"
+  "title": "Excellence at the service of your projects",
+  "subtitle": "A multidisciplinary team united by one shared passion: digital performance.",
+  "connect": "Connect",
+  "viewFullTeam": "View full team",
+  "fullTeamTitle": "Our Full Team"
   },
   "finalCta": {
   "title": "Want to work with us?",

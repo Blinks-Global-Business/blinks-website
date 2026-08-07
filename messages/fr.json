@@ -228,9 +228,11 @@
     { "label": "équipe cœur appuyée par un réseau d'experts certifiés", "value": "Une" }
   ],
   "team": {
-    "title": "L'excellence au service de vos projets",
-    "subtitle": "Une équipe multidisciplinaire unie par une même passion : la performance digitale.",
-    "connect": "Connect"
+  "title": "L'excellence au service de vos projets",
+  "subtitle": "Une équipe multidisciplinaire unie par une même passion : la performance digitale.",
+  "connect": "Connect",
+  "viewFullTeam": "Voir toute l'équipe",
+  "fullTeamTitle": "Toute notre équipe"
   },
   "finalCta": {
   "title": "Envie de collaborer avec nous ?",
